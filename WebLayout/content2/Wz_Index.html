@@ -1,0 +1,186 @@
+﻿<style>
+    .divDialog {
+        width: 99.8%;
+        word-wrap: break-word;
+        word-break: break-all;
+        /* padding-left: 5px;*/
+        line-height: 20px;
+        margin: 1px auto;
+        color: #808080;
+        vertical-align: middle;
+        font-family: 微软雅黑;
+    }
+
+        .divDialog label {
+            color: #000;
+            cursor: pointer;
+        }
+
+        .divDialog a {
+            text-decoration: none;
+            color: #0063DC;
+        }
+
+            .divDialog a:hover {
+                color: #6ca620;
+                text-decoration: underline;
+            }
+
+    .defualtIpt {
+        color: #ccc;
+        border: 1px solid #aed0ea;
+    }
+</style>
+<div style="height: 99%; width: auto; margin-top: 5px; margin-left: 5px;" class="easyui-layout" border="false">
+    <div region="north" id="dwPanel_div" split="false" header="false" collapsible="true" border="false" style="height: 150px;">
+        <div class="divDialog">
+            <div id="div1" style="float: left; height: 28px; line-height: 28px; width: 100%; float: left; font-size: 13px; overflow-y: hidden; border: 1px solid RGB(193,188,182);">
+                <div style="float: left; margin-left: 5px;">
+                    资源类型：&nbsp;<a dwtype="all" href="javascript:void(0)" style="color: red;">全部</a>&nbsp;
+                        |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">物资储备库</a>&nbsp;
+                        |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">井场场站</a>&nbsp;
+                        |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">泥浆站库</a>
+                </div>
+                <div style="width: 50%; float: right; border-left: 1px solid RGB(193,188,182)">
+                    &nbsp;
+                        单位范围：&nbsp;<a dwtype="all" href="javascript:void(0)" style="color: red;">全部</a>&nbsp;
+                        |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">内部单位</a>&nbsp;
+                        |&nbsp;<a dwtype="wbdw" href="javascript:void(0)">外部单位</a>
+                </div>
+            </div>
+            <div id="div2" style="float: left; height: 28px; line-height: 28px; width: 100%; float: left; font-size: 13px; overflow-y: hidden; border-bottom: 1px solid RGB(193,188,182); border-left: 1px solid RGB(193,188,182); border-right: 1px solid RGB(193,188,182);">
+                <div style="float: left; margin-left: 5px;">
+                    生产单位：&nbsp;<a dwtype="all" href="javascript:void(0)" style="color: red;">全部</a>&nbsp;
+                        |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">川西采气厂</a>&nbsp;
+                        |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">川东北采气厂</a>&nbsp;
+                        |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">物资供应中心</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">广元天然气净化有限公司</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">联益公司</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">新场公司</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">龙星公司</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">四川天燃气公司</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">车辆管理服务中心</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">云南采气厂</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">贵州采气厂</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">华星天然气公司</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">石油燃气销售总公司</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">广西石油基地服务中心</a>
+                </div>
+                <div class="moreClick" style="float: right; padding-right: 20px;"><span class="SpanMore">+更多</span></div>
+            </div>
+            <div id="div3" style="float: left; height: 28px; line-height: 28px; width: 100%; float: left; font-size: 13px; overflow-y: hidden; border-bottom: 1px solid RGB(193,188,182); border-left: 1px solid RGB(193,188,182); border-right: 1px solid RGB(193,188,182);">
+                <div style="float: left; margin-left: 5px;">
+                    资源地点：&nbsp;<a dwtype="all" href="javascript:void(0)" style="color: red;">全部</a>&nbsp;
+                        |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">德阳采气管理区基地</a>&nbsp;
+                        |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">川孝170井站</a>&nbsp;
+                        |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">新913井站</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">什邡采气管理区基地</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">金堂采气管理区基地</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">金蓬3井站</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">大邑1井站</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">高氯废水综合利用站</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">巴中采气大队队仓库</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">川西采气厂</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">华星公司储备中心</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">井下特种工具站</a>&nbsp;
+                </div>
+                <div class="moreClick" style="float: right; padding-right: 20px;"><span class="SpanMore">+更多</span></div>
+            </div>
+            <div id="div4" style="float: left; height: 28px; line-height: 28px; width: 100%; float: left; font-size: 13px; overflow-y: hidden; border-bottom: 1px solid RGB(193,188,182); border-left: 1px solid RGB(193,188,182); border-right: 1px solid RGB(193,188,182);">
+                <div style="float: left; margin-left: 5px;">
+                    物资大类：&nbsp;<a dwtype="all" href="javascript:void(0)" style="color: red;">全部</a>&nbsp;
+                        |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">井控物资类</a>&nbsp;
+                        |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">油气生产类</a>&nbsp;
+                        |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">消防灭火类</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">气防救援类</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">照明设施类</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">通讯设备类</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">医疗救护类</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">环境保护类</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">公用车辆类</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">其它物资类</a>
+                </div>
+                <div class="moreClick" style="float: right; padding-right: 20px;"><span class="SpanMore">+更多</span></div>
+            </div>
+            <div id="div5" style="float: left; height: 28px; line-height: 28px; width: 100%; float: left; font-size: 13px; overflow-y: hidden; border-bottom: 1px solid RGB(193,188,182); border-left: 1px solid RGB(193,188,182); border-right: 1px solid RGB(193,188,182);">
+                <div style="float: left; margin-left: 5px;">
+                    物资小类：&nbsp;<a dwtype="all" href="javascript:void(0)" style="color: red;">全部</a>&nbsp;
+                        |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">管道及配件</a>&nbsp;
+                        |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">消防车辆</a>&nbsp;
+                        |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">阀门及配件</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">环境监测车</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">临时食宿</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">工程车辆</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">救护车辆</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">通讯指挥车</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">移动照明</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">气防车辆</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">井控车辆</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">检测仪器</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">采油气配件</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">货车</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">对讲机</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">其他物资</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">泥浆材料</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">消防器材</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">生命救助类</a>&nbsp;
+                    |&nbsp;<a dwtype="ejdw" href="javascript:void(0)">专用船舶</a>&nbsp;
+                </div>
+                <div class="moreClick" style="float: right; padding-right: 20px;"><span class="SpanMore">+更多</span></div>
+            </div>
+        </div>
+    </div>
+    <div region="center" id="wzPanel_div" split="false" header="false" collapsible="false" title="查询结果">
+        <table id="tbWZXX">
+        </table>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#tbWZXX").datagrid({
+            method: 'get',
+            url: "content2/Wz_List.aspx",
+            border: false,
+            singleSelect: true,
+            pageNumber: 1,
+            fit: true,
+            pageSize: 15,
+            pagination: true,
+            fitColumns: false,
+            striped: true,
+            rownumbers: true,
+            pageList: [10, 15, 20, 30],
+            loadMsg: '正在加载物资数据..',
+            toolbar: "#gridYJWZBar",
+            cache: false,
+            columns: [[
+                    { field: "DWMC", title: "单位", align: 'center', width: 120 },
+                    { field: "YJZYNAME", title: "资源点", align: 'center', width: 140 },
+                    { field: "LX", title: "类型", align: 'center', width: 100 },
+                    { field: "WZMC", title: "物资名称", align: 'center', width: 120 },
+                    { field: "GGXH", title: "规格型号", align: 'center', width: 120 },
+                    { field: "ZT", title: "状态", align: 'center', width: 50 },
+                    { field: "PP", title: "品牌", align: 'center', width: 50 },
+                    { field: "SL", title: "数量", align: 'center', width: 50 },
+                    { field: "JLDW", title: "计量单位", align: 'center', width: 60 },
+                    { field: "CS", title: "购买时间", align: 'center', width: 70 },
+                    { field: "CS2", title: "失效日期", align: 'center', width: 70 },
+                    { field: "CFDD", title: "存放地点", align: 'center', width: 120 },
+                    { field: "CFDD2", title: "物资描述", align: 'center', width: 120 },
+                    { field: "SCCS", title: "生产厂商", align: 'center', width: 120 },
+                    { field: "BZ", title: "备注", align: 'center', width: 100 },
+                    { field: "XM", title: "录入人", align: 'center', width: 120 },
+                    { field: "LRSJ", title: "录入时间", align: 'center', width: 80 },
+                     {
+                         field: "Count", title: "操作", width: 80, align: 'center', formatter: function (value, row, index) {
+                             return "<a class='easyui-linkbutton' onclick=\"AddDag('" + row.YJZYNAME + "')\" href='javascript:void(0)' data-options='plain:true,iconCls:'icon-ok''>修改</a>";
+                         }
+                     }
+            ]]
+        });
+    });
+    //录入、编辑页面
+    function AddDag(data) {
+        alert(data);
+    }
+</script>

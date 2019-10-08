@@ -1,0 +1,117 @@
+.bg-gray {
+	background-color: rgb(239, 239, 239);
+}
+.bg-blue {
+	background-color: rgb(0, 159, 222);
+}
+.bg-white {
+	background-color: rgb(255, 255, 255);
+}
+.bg-red {
+	background-color: rgb(200, 22, 29);
+}
+.mian-with {
+	margin: 0px auto; width: 968px;
+}
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+.margin-right-1 {
+	margin-right: 1px;
+}
+.color-black {
+	color: rgb(34, 24, 21);
+}
+.color-white {
+	color: rgb(255, 255, 255);
+}
+.color-gray {
+	color: rgb(137, 137, 137);
+}
+.row-padding {
+	margin: 37px 0px 30px; height: 22px;
+}
+.border-gray {
+	border: 1px solid rgb(201, 202, 202); border-image: none;
+}
+.border-gray:hover {
+	border: 1px solid rgb(0, 159, 222); border-image: none;
+}
+.border-gray:focus {
+	border: 1px solid rgb(0, 159, 222); border-image: none;
+}
+.logo {
+	padding: 30px 0px 0px; height: 46px;
+}
+.logo-text {
+	margin: 0px 0px 0px 10px; line-height: 46px; font-size: 35px;
+}
+.bannerbox {
+	margin: 15px 0px 30px; height: 400px;
+}
+.bannerbox .mian-with {
+	position: relative;
+}
+.loginbox-show {
+	background: url("images/box-show.png") no-repeat right top; top: -30px; width: 14px; height: 30px; right: 360px; position: absolute; z-index: 7;
+}
+.loginbox {
+	padding: 0px 25px; top: -30px; width: 310px; height: 520px; right: 0px; position: absolute; z-index: 9; box-shadow: 2px 3px 5px 0px rgba(8,1,3,0.35);
+}
+.loginbox .row {
+	width: 100%; position: relative;
+}
+.loginbox .row h1 {
+	line-height: 1; font-size: 22px;
+}
+.loginbox .row .button-Language {
+	border-radius: 3px; line-height: 22px; font-size: 12px; margin-left: 5px;
+}
+.loginbox .row .button-Language:hover {
+	background-color: rgba(0, 195, 222, 0.019);
+}
+.icons-China {
+	background: url("../Images/icons-China.png") no-repeat center; margin: 1px 5px; width: 20px; height: 20px;
+}
+.icons-Britain {
+	background: url("../Images/icons-Britain.png") no-repeat center; margin: 1px 5px; width: 20px; height: 20px;
+}
+.loginbox .row input {
+	margin: 0px 0px 15px; padding: 5px; width: 298px; height: 40px;
+}
+.loginbox .row ul {
+	margin: 0px 0px 15px; width: 307px; overflow: hidden;
+}
+.loginbox .row .secelted {
+	margin: 5px; text-align: left; line-height: 38px; font-size: 16px;
+}
+.popupbox {
+	margin: 5px; text-align: left; line-height: 38px; font-size: 16px;
+}
+.loginbox .row .popupbox {
+	top: 48px; width: 308px; position: absolute; z-index: 10;
+}
+.loginbox .row .popupbox p {
+	padding: 5px; line-height: 40px;
+}
+.loginbox .row .popupbox p:hover {
+	background-color: rgba(0, 195, 222, 0.019);
+}
+.loginbox .row .alt_down {
+	background-position: 0px -5px; width: 30px; height: 42px; float: right; background-image: url("images/alt-login.png");
+}
+.loginbox .row .alt_up {
+	background-position: 0px 45px; width: 30px; height: 48px; float: right; background-image: url("images/alt-login.png");
+}
+.loginbox .row .password {
+	top: 0px; width: 98px; height: 44px; right: 4px; position: absolute;
+}
+.loginbox .row .btn-login {
+	margin: 0px 0px 15px; width: 310px; height: 50px; font-size: 20px;
+}
+footer {
+	padding: 25px 0px; width: 100%; height: 46px; bottom: 0px; line-height: 1.6; font-size: 12px; position: absolute;
+}

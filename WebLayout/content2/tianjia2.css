@@ -1,0 +1,72 @@
+/*列表搜索内容*/
+.nr_sousuo{padding:8px;background:#fff;border:1px solid #ccc;overflow:hidden;margin-top:10px}
+.frame{margin:10px}
+.nr_sousuo_dw{margin:0 7px;overflow:hidden;float:left}
+.nr_sousuo_bt{float:left;line-height:30px;font-size:14px;color:#594e56;padding-right:5px;font-family:"microsoft yahei"}
+.nr_sousuo_ss{float:left}
+.nr_sousuo_ss input{background:#ffffe9;font-size:14px!important}
+
+
+/*修改后的表格样式*/
+.datagrid-body td,.datagrid-footer td,.datagrid-header td{padding:0;border-color:#c9d6df;border-style:solid}
+.datagrid-header-inner{background-color:#d6f0fb}
+/*.accordion,.accordion .accordion-header,.panel-header{border-top:4px solid #3eabe7}*/
+
+
+/*流程页面*/
+table{margin:0;padding:0;border:0;border-collapse:collapse;vertical-align:baseline;font:inherit;font-size:100%;border-spacing:0}
+ol,ul{list-style:none}
+.clearfix:after{clear:both;display:block;visibility:hidden;height:0;content:""}
+.clearfix{display:inline-block}
+.clearfix{height:1%}
+.clearfix{display:block;overflow:hidden}
+.ellipsis{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.alert{margin-bottom:20px;padding:0 10px;height:36px;border:1px solid #ddd;color:#888;line-height:36px}
+.alert .close{float:right;color:#999;font-size:12px}
+.alert .close:hover{text-decoration:none}
+.alert.alert-warning{border-color:#ffe195;background:#fff5db;color:#e2ba89}
+.alert.alert-error{border-color:#fc0000;background:#fceee8;color:#fc0000}
+::-webkit-scrollbar-track-piece{-webkit-border-radius:0;background-color:#fff}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-thumb{height:50px;outline:2px solid #fff;outline-offset:-2px;border:2px solid #fff;-webkit-border-radius:6px;background-color:#b8b8b8;opacity:.5;filter:alpha(opacity=50);-moz-opacity:.5;-khtml-opacity:.5}
+::-webkit-scrollbar-thumb:hover{height:50px;-webkit-border-radius:6px;background-color:#878987}
+.kv-table{border-right:1px solid #cacaca;}
+table.kv-table{width:100%; font-family: "microsoft yahei";}
+table.kv-table .kv-label{width:150px; border:1px solid #cacaca;border-top:none;background:#f5f5f5; text-align: center; }
+table.kv-table .kv-label span{color: #FF0000;}
+table.kv-table td.kv-content,table.kv-table td.kv-label{ height:22px;border-bottom:1px solid #cacaca;border-left:1px solid #cacaca;font-size:14px;}
+table.kv-table th{ height:24px;border:1px solid #fff;border-bottom:1px solid #cacaca;font-size:14px;}
+table.kv-table tr:first-child td.kv-content,table.kv-table tr:first-child td.kv-label{border-top:1px solid #cacaca}
+table.kv-table tr td.kv-content:last-child{border-right:1px solid #cacaca}
+table.kv-table tr .button{height:28px;border-radius:0;text-align:center;text-indent:0}
+table.kv-table .kv-content{padding:5px 1px;}
+table.kv-table .textarea-wrap textarea{}
+
+.table_bt{font-size: 16px; font-family: "microsoft yahei"; color: #0e8bc5; padding-left: 15px;font-weight: bold;border-bottom:1px solid #cacaca; padding: 5px 0px;}
+
+
+/*流程页面顶部分页面*/
+
+.opt-buttons{margin-bottom:10px}
+.opt-buttons .easyui-linkbutton{margin-right:5px}
+.basic-info{position:relative;padding:10px}
+.editor-state{height:200px}
+
+
+/*修改的tab样式表*/
+
+
+.zyddcontainer .content .column { position: relative; height: 23px; border-bottom: 1px solid #d4d4d4;
+    margin-bottom: 10px; margin-top: 2px;}
+.zyddcontainer .content .column span.current {
+    position: relative;  top: 0px; display: inline-block; color: #0c80d7; font-size: 16px;  font-weight: bold;
+    height: 22px; line-height: 22px; border-bottom: 3px solid #0e8bc5; font-family: "microsoft yahei";}
+    
+/*按钮样式*/
+.new_form_di{padding: 20px; margin: 0 auto; text-align: center; overflow: hidden; margin-top: 30px;}
+.new_form_anniu_lan{ background: #0c80d7; border: 1px solid #0b6fba;padding: 10px 30px; margin: 0px 10px; border-radius: 3px; color: #fff; font-family: "microsoft yahei"; font-size: 16px;}
+.new_form_anniu_lan:hover{ background: #0b6fba; border: 1px solid #0b6fba;}
+.new_form_anniu_lv{ background: #90c61e; border: 1px solid #3c8b02;padding: 10px 30px; margin: 0px 10px; border-radius: 3px; color: #fff; font-family: "microsoft yahei"; font-size: 16px;}
+.new_form_anniu_lv:hover{ background: #3c8b02; border: 1px solid #3c8b02;}
+.new_form_anniu_hui{background: #767676; border: 1px solid #5f5f5f;padding: 10px 30px; margin: 0px 10px; border-radius: 3px; color: #fff; font-family: "microsoft yahei"; font-size: 16px;}
+.new_form_anniu_hui:hover{ background: #5f5f5f; border: 1px solid #5f5f5f;}

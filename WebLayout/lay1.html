@@ -1,0 +1,513 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>布局1</title>
+    <link href="css1/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!--[if IE 7]>
+	    <link rel="stylesheet" href="js/jquery-easyui-1.4.5/css/font-awesome/css/font-awesome-ie7.min.css">
+	    <![endif]-->
+    <link href="js1/jquery-easyui/themes/default/easyui.css" rel="stylesheet" />
+    <link href="js1/jquery-easyui/themes/icon.css" rel="stylesheet" />
+    <script src="js1/jquery-easyui/jquery.min.js"></script>
+    <script src="js1/jquery-easyui/jquery.easyui.min.js"></script>
+    <script src="js1/jquery-easyui/locale/easyui-lang-zh_CN.js"></script>
+    <link href="css1/layout.css" rel="stylesheet" />
+</head>
+<body class="easyui-layout">
+
+    <!--头部区域-->
+    <div id="north" data-options="region:'north',border:false,collapsedSize:0" class="head" style="height: 95px;">
+        <!--头部第一行-->
+        <div class="head1">
+            <div class="userInfo">
+                <i class="fa fa-user"><span class="info" id="userdwname">西北油田分公司</span><span class="info">：胡利民</span></i>
+            </div>
+            <div class="sysBtn">
+                <i class="fa fa-sign-out"><a class="info" id="quit_btn" style="cursor: pointer;">退出</a></i>
+            </div>
+        </div>
+        <!--头部第二行-->
+        <div class="head2">
+            <div class="logo"></div>
+            <!--系统模块主菜单-->
+            <div class="sysModule">
+                <ul id="sysModule">
+                    <li>
+                        <div class="module active" id="sy">
+                            <div class="module-icon">
+                                <i class="fa fa-home"></i>
+                            </div>
+                            <div class="module-name">
+                                首页
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="module" id="t1">
+                            <div class="module-icon"><i class="fa fa-tasks"></i></div>
+                            <div class="module-name">能耗展示</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="module" id="t2">
+                            <div class="module-icon"><i class="fa fa-pencil-square"></i></div>
+                            <div class="module-name">能效报警</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="module" id="t3">
+                            <div class="module-icon"><i class="fa fa-book"></i></div>
+                            <div class="module-name">能效评价</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="module" id="t4">
+                            <div class="module-icon"><i class="fa fa-file"></i></div>
+                            <div class="module-name">能效优化</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="module" id="t5">
+                            <div class="module-icon"><i class="fa fa-flag"></i></div>
+                            <div class="module-name">业务管理</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="module" id="t6">
+                            <div class="module-icon"><i class="fa fa-inbox"></i></div>
+                            <div class="module-name">公共模块</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--头部结束-->
+
+
+    <!--左侧手风琴-->
+    <div id="west" data-options="region:'west',split:true,collapsible:true" style="width: 220px;">
+        <div class="easyui-accordion" id="sysAccordion" data-options="fit:true,border:false">
+        </div>
+    </div>
+    <!--左侧结束-->
+
+
+    <!--中间工作区域 -->
+    <div data-options="region:'center'">
+        <div id="tt" class="easyui-tabs"
+            data-options="fit:true,border:false,tools:'#tab-tools'"
+            style="padding: 0;">
+        </div>
+        <div id="tab-tools">
+            <a id="max" href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-max'"></a>
+        </div>
+
+        <!-- 右键菜单 -->
+        <div id="rcmenu" class="easyui-menu" style="">
+            <div data-options="iconCls:'icon-cancel'" id="closecur">
+                关闭
+            </div>
+            <div id="closeall">
+                关闭全部
+            </div>
+            <div id="closeother">
+                关闭其他
+            </div>
+            <div class="menu-sep">
+            </div>
+            <div id="closeright">
+                关闭右侧标签页
+            </div>
+            <div id="closeleft">
+                关闭左侧标签页
+            </div>
+        </div>
+    </div>
+    <!--中间工作区域结束-->
+    <!--底部-->
+    <div data-options="region:'south',border:false" class="footer" style="height: 30px;">
+        <div>
+            山东胜软科技股份有限公司版权所有 服务电话:15275652833 13589976324,版本: v0.1
+        </div>
+    </div>
+    <script src="js1/data.js"></script>
+    <!--底部结束-->
+    <script>
+        //初始化界面
+        $(function () {
+            //隐藏左侧导航区
+            $('body').layout('hidden', "west");
+            //加载首页
+            //            addTab('sy', '首页', 'SuperAdmin/index.html');
+            addTab('sy', '首页', 'content1/lay1_index.html');
+            $('#tab-tools').on('click', '.icon-max', function () {
+                $(this).removeClass('icon-max').addClass('icon-min')
+                if (selectPage == "sy") {
+                    $('body').layout('collapse', 'north');
+                } else {
+                    $('body').layout('collapse', 'west').layout('collapse', 'north');
+                }
+            })
+            //头部展示隐藏
+            $('#tab-tools').on('click', '.icon-min', function () {
+                $(this).removeClass('icon-min').addClass('icon-max')
+                if (selectPage == "sy") {
+                    $('body').layout('expand', 'north')
+                } else {
+                    $('body').layout('expand', 'west').layout('expand', 'north')
+                }
+            })
+
+            //系统模块hover
+            $('#sysModule .module').hover(function () {
+                if ($(this).hasClass('active')) return;
+                $(this).addClass('hover').find('.module-icon').addClass('hover')
+            }, function () {
+                $(this).removeClass('hover').find('.module-icon').removeClass('hover')
+            })
+            //手风琴内容
+            var Accord_content = "";
+            var Accord_data = new Array;
+            //随机给手风琴配置前缀	
+            var accordIcon = ["fa fa-cog", "fa fa-table", "fa fa-flag"];
+            //系统模块click
+            $('#sysModule').on('click', '.module', function () {
+                //加载左侧
+                $('body').layout('show', "west");
+
+                $('#sysModule .active').removeClass('active');
+                $(this).removeClass('hover').addClass('active');
+
+                var selectedId = $(this).attr("id");
+                //赋值给全局参数
+                selectPage = selectedId;
+                //选中首页
+                if (selectedId == "sy") {
+                    $('body').layout('hidden', "west");
+                    addTab('sy', '首页', 'index_zhnh.html');
+                    return;
+                }
+                //移除手风琴
+                removeAllChild("sysAccordion");
+                //模块内容
+                if (selectedId == "t1") {
+                    Accord_content = Accord_content_1;
+                    Accord_data = [Accord_data_1];
+
+                } else if (selectedId == "t2") {
+                    Accord_content = Accord_content_2;
+                    Accord_data = [Accord_data2_1, Accord_data2_2];
+                } else if (selectedId == "t3") {
+                    Accord_content = Accord_content_3;
+                    Accord_data = [Accord_data_3, Accord_data_3_1, Accord_data_3_2];
+                } else if (selectedId == "t4") {
+                    Accord_content = Accord_content_4;
+                    Accord_data = [Accord_data_4];
+                } else if (selectedId == "t5") {
+                    Accord_content = Accord_content_5;
+                } else if (selectedId == "t6") {
+                    Accord_content = Accord_content_6;
+                }
+
+                //增加手风琴
+                var selected;
+                for (var i = 0; i < Accord_content.length; i++) {
+                    selected = false;
+                    if (i == 0) {
+                        selected = true;
+                    }
+                    $('#sysAccordion').accordion('add', {
+                        title: '<i class=\'' + accordIcon[Math.round(Math.random() * 2)] + '\'></i>' + Accord_content[i].content,
+                        content: "<br/><ul id='" + Accord_content[i].id + "' ></ul>",
+                        selected: selected
+                    });
+                    $("#" + Accord_content[i].id).tree({
+                        data: Accord_data[i],
+                        lines: true,
+                        onClick: function (node) {
+                            if (node.children) return;
+                            addTab(node.id, node.text, node.href)
+                        }
+                    });
+                }
+            })
+
+            //删除所有子节点
+            function removeAllChild(nodeid) {
+                var div = document.getElementById(nodeid);
+                while (div.hasChildNodes()) {
+                    div.removeChild(div.firstChild);
+                }
+            }
+
+            $('#quit_btn').on('click', function () {
+                $.messager.confirm('确认', '确认退出该系统吗?', function (r) {
+                    if (r) {
+
+                    }
+                });
+            })
+            //右键菜单
+            $("#tt").bind('contextmenu', function (e) {
+                e.preventDefault();
+                $('#rcmenu').menu('show', {
+                    left: e.pageX,
+                    top: e.pageY
+                });
+            });
+            //关闭当前标签页
+            $("#closecur").bind("click", function () {
+                var tab = $('#tt').tabs('getSelected');
+                var index = $('#tt').tabs('getTabIndex', tab);
+                $('#tt').tabs('close', index);
+            });
+            //关闭所有标签页
+            $("#closeall").bind("click", function () {
+                var tablist = $('#tt').tabs('tabs');
+                for (var i = tablist.length - 1; i >= 0; i--) {
+                    $('#tt').tabs('close', i);
+                }
+            });
+            //关闭非当前标签页（先关闭右侧，再关闭左侧）
+            $("#closeother").bind("click", function () {
+                var tablist = $('#tt').tabs('tabs');
+                var tab = $('#tt').tabs('getSelected');
+                var index = $('#tt').tabs('getTabIndex', tab);
+                for (var i = tablist.length - 1; i > index; i--) {
+                    $('#tt').tabs('close', i);
+                }
+                var num = index - 1;
+                for (var i = num; i >= 0; i--) {
+                    $('#tt').tabs('close', 0);
+                }
+            });
+            //关闭当前标签页右侧标签页
+            $("#closeright").bind("click", function () {
+                var tablist = $('#tt').tabs('tabs');
+                var tab = $('#tt').tabs('getSelected');
+                var index = $('#tt').tabs('getTabIndex', tab);
+                for (var i = tablist.length - 1; i > index; i--) {
+                    $('#tt').tabs('close', i);
+                }
+            });
+            //关闭当前标签页左侧标签页
+            $("#closeleft").bind("click", function () {
+                var tab = $('#tt').tabs('getSelected');
+                var index = $('#tt').tabs('getTabIndex', tab);
+                var num = index - 1;
+                for (var i = 0; i <= num; i++) {
+                    $('#tt').tabs('close', 0);
+                }
+            });
+        })
+    </script>
+    <script type="text/javascript">
+        //全局参数，判断当点击扩展、折叠时，是否首页已选中（ID）,默认首页选中
+        var selectPage = "sy";
+        /**  
+         * layout方法扩展  重写 组件可见函数、隐藏、展示函数
+         * @param {Object} jq  
+         * @param {Object} region  
+         */
+        $.extend($.fn.layout.methods, {
+            /**  
+             * 面板是否存在和可见  
+             * @param {Object} jq  
+             * @param {Object} params  
+             */
+            isVisible: function (jq, params) {
+                var panels = $.data(jq[0], 'layout').panels;
+                var pp = panels[params];
+                if (!pp) {
+                    return false;
+                }
+                if (pp.length) {
+                    return pp.panel('panel').is(':visible');
+                } else {
+                    return false;
+                }
+            },
+            /**  
+             * 隐藏除某个region，center除外。  
+             * @param {Object} jq  
+             * @param {Object} params  
+             */
+            hidden: function (jq, params) {
+                return jq.each(function () {
+                    var opts = $.data(this, 'layout').options;
+                    var panels = $.data(this, 'layout').panels;
+                    if (!opts.regionState) {
+                        opts.regionState = {};
+                    }
+                    var region = params;
+                    function hide(dom, region, doResize) {
+                        var first = region.substring(0, 1);
+                        var others = region.substring(1);
+                        var expand = 'expand' + first.toUpperCase() + others;
+                        if (panels[expand]) {
+                            if ($(dom).layout('isVisible', expand)) {
+                                opts.regionState[region] = 1;
+                                panels[expand].panel('close');
+                            } else if ($(dom).layout('isVisible', region)) {
+                                opts.regionState[region] = 0;
+                                panels[region].panel('close');
+                            }
+                        } else {
+                            panels[region].panel('close');
+                        }
+                        if (doResize) {
+                            $(dom).layout('resize');
+                        }
+                    };
+                    if (region.toLowerCase() == 'all') {
+                        hide(this, 'east', false);
+                        hide(this, 'north', false);
+                        hide(this, 'west', false);
+                        hide(this, 'south', true);
+                    } else {
+                        hide(this, region, true);
+                    }
+                });
+            },
+            /**  
+             * 显示某个region，center除外。  
+             * @param {Object} jq  
+             * @param {Object} params  
+             */
+            show: function (jq, params) {
+                return jq.each(function () {
+                    var opts = $.data(this, 'layout').options;
+                    var panels = $.data(this, 'layout').panels;
+                    var region = params;
+
+                    function show(dom, region, doResize) {
+                        var first = region.substring(0, 1);
+                        var others = region.substring(1);
+                        var expand = 'expand' + first.toUpperCase() + others;
+                        if (panels[expand]) {
+                            if (!$(dom).layout('isVisible', expand)) {
+                                if (!$(dom).layout('isVisible', region)) {
+                                    if (opts.regionState[region] == 1) {
+                                        panels[expand].panel('open');
+                                    } else {
+                                        panels[region].panel('open');
+                                    }
+                                }
+                            }
+                        } else {
+                            panels[region].panel('open');
+                        }
+                        if (doResize) {
+                            $(dom).layout('resize');
+                        }
+                    };
+                    if (region.toLowerCase() == 'all') {
+                        show(this, 'east', false);
+                        show(this, 'north', false);
+                        show(this, 'west', false);
+                        show(this, 'south', true);
+                    } else {
+                        show(this, region, true);
+                    }
+                });
+            }
+        });
+
+        /**
+         * 重写easyui-tabs exist\select方法
+         */
+        $.extend($.fn.tabs.methods, {
+            getTabById: function (jq, id) {
+                var tabs = $.data(jq[0], 'tabs').tabs;
+                for (var i = 0; i < tabs.length; i++) {
+                    var tab = tabs[i];
+                    if (tab.panel('options').id == id) {
+                        return tab;
+                    }
+                }
+                return null;
+            },
+            selectById: function (jq, id) {
+                return jq.each(function () {
+                    var state = $.data(this, 'tabs');
+                    var opts = state.options;
+                    var tabs = state.tabs;
+                    var selectHis = state.selectHis;
+                    if (tabs.length == 0) { return; }
+                    var panel = $(this).tabs('getTabById', id); // get the panel to be activated 
+                    if (!panel) { return }
+                    var selected = $(this).tabs('getSelected');
+                    if (selected) {
+                        if (panel[0] == selected[0]) { return }
+                        $(this).tabs('unselect', $(this).tabs('getTabIndex', selected));
+                        if (!selected.panel('options').closed) { return }
+                    }
+                    panel.panel('open');
+                    var title = panel.panel('options').title;        // the panel title 
+                    selectHis.push(title);        // push select history 
+                    var tab = panel.panel('options').tab;        // get the tab object 
+                    tab.addClass('tabs-selected');
+                    // scroll the tab to center position if required. 
+                    var wrap = $(this).find('>div.tabs-header>div.tabs-wrap');
+                    var left = tab.position().left;
+                    var right = left + tab.outerWidth();
+                    if (left < 0 || right > wrap.width()) {
+                        var deltaX = left - (wrap.width() - tab.width()) / 2;
+                        $(this).tabs('scrollBy', deltaX);
+                    } else {
+                        $(this).tabs('scrollBy', 0);
+                    }
+                    $(this).tabs('resize');
+                    opts.onSelect.call(this, title, $(this).tabs('getTabIndex', panel));
+                });
+            },
+            existsById: function (jq, id) {
+                return $(jq[0]).tabs('getTabById', id) != null;
+            }
+        });
+        //刷新tab
+        function refreshTab(cfg) {
+            var refresh_tab = $('#tt').tabs('getSelected');
+            if (refresh_tab && refresh_tab.find('iframe').length > 0) {
+                var _refresh_ifram = refresh_tab.find('iframe')[0];
+                var refresh_url = cfg.url ? cfg.url : _refresh_ifram.src;
+                //刷新title
+                $('#tt .tabs-selected .tabs-title').html(cfg.tabTitle);
+                //刷新url
+                _refresh_ifram.contentWindow.location.href = refresh_url;
+            }
+        }
+
+        //增加Tab
+        function addTab(nodeid, title, href, icon) {
+            if (nodeid == '')
+                nodeid = $('#tt').tabs('getSelected').attr('id');
+            var tt = $('#tt');
+
+            //如果tab已经存在,则选中并刷新该tab (根据tab名确定)   
+            if (tt.tabs("exists", title)) {
+                tt.tabs("select", title);
+                //刷新tab
+                refreshTab({ tabTitle: title, url: href });
+            } else {
+                if (href) {
+                    var url = href;
+                    var content = '<iframe scrolling="auto" frameborder="0"  src="' + url + '" style="width:100%;height:100%;display: block "></iframe>';
+                } else {
+                    var content = '未实现';
+                }
+                tt.tabs('add', {
+                    id: nodeid
+                    , title: title
+                    , closable: true
+                    , content: content
+                    //,iconCls:icon||'icon-default'  
+                });
+            }
+        }
+    </script>
+</body>
+</html>

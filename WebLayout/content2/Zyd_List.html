@@ -1,0 +1,98 @@
+﻿<div style="height: 99%; width: auto; margin-top: 5px; margin-left: 5px;" class="easyui-layout" border="false">
+    <div region="west" id="ZyPanel_div" split="true" header="false" collapsible="true" style="width: 220px;">
+        <ul class="easyui-tree" animate="true" id="Tree_zyd"></ul>
+    </div>
+    <div region="center" id="wzPanel_div" split="false" header="false" collapsible="false">
+        <table id="tbYJZyGrid">
+        </table>
+    </div>
+</div>
+<div id="gridYJZydBar" style="height: auto; width: 100%;">
+    <a href="javascript:void(0)" id="A2" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true"
+        onclick="AddDag()">添加</a>
+    <a href="javascript:void(0)" id="A1" class="easyui-linkbutton" data-options="iconCls:'icon-redo',plain:true"
+        onclick="OpUpload()">导入数据</a>
+    <a href="javascript:void(0)" id="A3" class="easyui-linkbutton" data-options="iconCls:'icon-down',plain:true"
+        onclick="WZDataDownLoad()">导出数据</a>
+    <a href="javascript:void(0)" id="model_LinkButton" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true"
+        onclick="modelDownLoad()">模板下载</a>
+</div>
+<div id="DivYJWZDialog"></div>
+<script>
+    $(document).ready(function () {
+        $("#tbYJZyGrid").datagrid({
+            onDblClickRow: function (rowIndex, dataRow) {
+                //OpenYJWZAddDag(dataRow);<a href="Json/tab1.json">Json/tab1.aspx</a>
+            },
+            method: 'get',
+            url: "content2/Zyd_List.aspx",
+            border: false,
+            singleSelect: true,
+            pageNumber: 1,
+            fit: true,
+            pageSize: 15,
+            pagination: true,
+            fitColumns: false,
+            striped: true,
+            rownumbers: true,
+            pageList: [10, 15, 20, 30],
+            loadMsg: '正在加载资源点数据..',
+            toolbar: "#gridYJZydBar",
+            cache: false,
+            columns: [[
+                    { field: "C1", title: "所属单位", align: 'center', width: 120 },
+                    { field: "C2", title: "资源点名称", align: 'center', width: 140 },
+                    { field: "C3", title: "资源点类型", align: 'center', width: 120 },
+                    { field: "C4", title: "负责人", align: 'center', width: 120 },
+                    { field: "C5", title: "联系电话", align: 'center', width: 120 },
+                    { field: "C6", title: "值班电话", align: 'center', width: 120 },
+                    { field: "C7", title: "资源点位置", align: 'center', width: 200 },
+                    { field: "C8", title: "维护单位", align: 'center', width: 180 },
+                    { field: "C9", title: "备注", align: 'center', width: 100 },
+                    { field: "C10", title: "录入人", align: 'center', width: 120 },
+                    { field: "C11", title: "录入时间", align: 'center', width: 80 },
+                    { field: "C12", title: "操作", align: 'center', width: 80 }
+            ]]
+        });
+        $('#Tree_zyd').tree({
+            url: 'content2/Dw_Tree.aspx'
+        });
+    });
+    //录入、编辑页面
+    function AddDag() {
+        $('#DivYJWZDialog').dialog({
+            title: "应急资源点维护",
+            height: 370,
+            width: 960,
+            iconCls: "icon-edit",
+            href: "Zy/Zyd_Edit.html",
+            cache: false,
+            onClose: function () {
+                $("#tbYJZyGrid").datagrid("reload");
+            }
+        });
+    }
+    //导入数据
+    function OpUpload() {
+        $('#DivYJWZDialog').dialog({
+            title: '导入应急资源点',
+            height: 370,
+            width: 560,
+            cache: false,
+            iconCls: "icon-edit",
+            href: "Zy/Zyd_Import.html",
+            onClose: function () {
+                $("#tbYJZyGrid").datagrid("reload");
+            }
+        });
+    }
+    //导出
+    function WZDataDownLoad() {
+        var divE = document.createElement("div");
+       
+    }
+    //下载文件
+    function modelDownLoad() {
+        window.location.href = 'Zy/ModelFile/资源点.xls';
+    }
+</script>
