@@ -1,0 +1,190 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{69B2B274-1D56-40D0-8959-6870E7EBC8FB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebHightChart图片导出</RootNamespace>
+    <AssemblyName>WebHightChart图片导出</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Highcharts-4.2.3\gfx\vml-radial-gradient.png" />
+    <Content Include="Highcharts-4.2.3\graphics\highslide\close.png" />
+    <Content Include="Highcharts-4.2.3\graphics\highslide\closeX.png" />
+    <Content Include="Highcharts-4.2.3\graphics\highslide\outlines\rounded-white.png" />
+    <Content Include="Highcharts-4.2.3\graphics\highslide\resize.gif" />
+    <Content Include="Highcharts-4.2.3\graphics\highslide\zoomout.cur" />
+    <Content Include="Highcharts-4.2.3\graphics\meteogram-symbols-30px.png" />
+    <Content Include="Highcharts-4.2.3\graphics\search.png" />
+    <Content Include="Highcharts-4.2.3\graphics\skies.jpg" />
+    <Content Include="Highcharts-4.2.3\graphics\snow.png" />
+    <Content Include="Highcharts-4.2.3\graphics\sun.png" />
+    <Content Include="Highcharts-4.2.3\index.htm" />
+    <Content Include="Highcharts-4.2.3\js\adapters\standalone-framework.js" />
+    <Content Include="Highcharts-4.2.3\js\adapters\standalone-framework.src.js" />
+    <Content Include="Highcharts-4.2.3\js\highcharts-3d.js" />
+    <Content Include="Highcharts-4.2.3\js\highcharts-3d.src.js" />
+    <Content Include="Highcharts-4.2.3\js\highcharts-more.js" />
+    <Content Include="Highcharts-4.2.3\js\highcharts-more.src.js" />
+    <Content Include="Highcharts-4.2.3\js\highcharts.js" />
+    <Content Include="Highcharts-4.2.3\js\highcharts.src.js" />
+    <Content Include="Highcharts-4.2.3\js\jquery-1.8.3.min.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\boost.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\boost.src.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\broken-axis.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\broken-axis.src.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\canvas-tools.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\canvas-tools.src.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\data.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\data.src.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\drilldown.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\drilldown.src.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\exporting.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\exporting.src.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\funnel.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\funnel.src.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\heatmap.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\heatmap.src.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\no-data-to-display.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\no-data-to-display.src.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\offline-exporting.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\offline-exporting.src.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\solid-gauge.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\solid-gauge.src.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\treemap.js" />
+    <Content Include="Highcharts-4.2.3\js\modules\treemap.src.js" />
+    <Content Include="Highcharts-4.2.3\js\themes\dark-blue.js" />
+    <Content Include="Highcharts-4.2.3\js\themes\dark-green.js" />
+    <Content Include="Highcharts-4.2.3\js\themes\dark-unica.js" />
+    <Content Include="Highcharts-4.2.3\js\themes\gray.js" />
+    <Content Include="Highcharts-4.2.3\js\themes\grid-light.js" />
+    <Content Include="Highcharts-4.2.3\js\themes\grid.js" />
+    <Content Include="Highcharts-4.2.3\js\themes\sand-signika.js" />
+    <Content Include="Highcharts-4.2.3\js\themes\skies.js" />
+    <Content Include="Highcharts-4.2.3\readme.txt" />
+    <Content Include="Demo1.htm" />
+    <Content Include="Demo2.htm" />
+    <Content Include="Web.config" />
+    <Content Include="Demo3.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Demo3.aspx.cs">
+      <DependentUpon>Demo3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demo3.aspx.designer.cs">
+      <DependentUpon>Demo3.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="img\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62120</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62120/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
