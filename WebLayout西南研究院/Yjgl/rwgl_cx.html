@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>预警任务管理</title>
+    <link href="../css/bodyCss.css" rel="stylesheet" />
+    <script src="../Scripts/bodyJs.js"></script>
+</head>
+<body>
+    <div id="toolBar">
+        <div class="container-fluid">
+            <div class="row" style="background-color: white; padding-top: 9px;">
+                <div class="col-sm-12">
+                    <div class="form-inline" style="text-align: left;">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon" style="background-color: #f5f5f5"><i class="fa fa-share-alt-square" style="color: #286090"></i>&nbsp;&nbsp;井号:</div>
+                                <input id="paramGCMC" type="text" class="form-control" style="width: 150px;" name="search" placeholder="高庙33-11HF">
+                            </div>
+                            <label for="exampleInputName2">日期：</label>
+                            <input id="dd" type="text" class="easyui-datebox" style="height: 30px; width: 100px;" value="2018-01-01">
+                        </div>
+                        <div class="form-group">
+                            <label>监控间隔：</label>
+                            <select class="form-control">
+                                <option>每30秒</option>
+                                <option>每60秒</option>
+                                <option>每90秒</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <div class="dataOpBtns">
+                                <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'" onclick="javascript:add()">查询</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" style="background-color: white; padding-top: 9px;">
+            <div class="col-lg-2 col-lg-offset-3">
+                <h3>预警任务管理 </h3>
+            </div>
+            <div class="col-sm-12">
+                <table id="_datagrid" style="width: 1200px; height: 680px"></table>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            createTable();
+            $('#_datagrid').datagrid({
+                data: [
+                    { COL1: '高庙33-11HF', COL2: '积液诊断', COL3: '8', COL5: '08-01 15：30', COL15: '73', COL16: '', COL17: '', COL18: '开', COL19: '', COL20: '' },
+                    { COL1: '义古1-斜1', COL2: '积液诊断', COL3: '', COL4: '73', COL15: '', COL16: '', COL17: '', COL18: '', COL19: '', COL20: '' },
+                    { COL1: '林中14-平18', COL2: '积液诊断', COL3: '', COL5: '08-01 12：10', COL15: '', COL16: '120', COL17: '', COL18: '关', COL19: '1', COL20: '' },
+                    { COL1: '林中13-斜08', COL2: '泡排加注自控', COL3: '', COL5: '08-01 10：25', COL4: '', COL15: '50', COL16: '', COL17: '', COL18: '开', COL19: '1', COL20: '1' },
+                    { COL1: '单38-斜4', COL2: '泡排加注自控', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL1: '罗斜817', COL2: '泡排加注自控', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL1: '垦西102', COL2: '柱塞气举自控', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL1: '中26-斜544', COL2: '柱塞气举自控', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL1: '东4-斜更511', COL2: '柱塞气举自控', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL1: '南8-斜812', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL1: '渤76-斜471', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL1: '中1-斜更5', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL1: '中19-斜816', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL1: '中11-斜516', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL1: '南10-斜214', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL1: '渤76-平472', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL1: '垦东641-平9', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' }
+                ]
+             , onDblClickRow: function (index, row) {
+                 addZsqj();
+             }
+            });
+        })
+        function createTable() {
+            $('#_datagrid').datagrid({
+                url: '',
+                idField: 'ID',
+                rownumbers: true,
+                border: 1,
+                fit: false,
+                fitColumns: true,
+                singleSelect: true,
+                pageSize: 30,
+                remoteFilter: true,
+                striped: true,
+                pagination: true,
+                frozenColumns: [[
+                    { title: '井号', field: 'COL1', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                ]],
+                columns: [
+                    [
+                    { title: '生产数据', field: 'COL4', width: 100, rowspan: 1, colspan: 3, halign: 'center', align: 'center' },
+                    { title: '运行状态', field: 'COL3', width: 100, rowspan: 1, colspan: 4, halign: 'center', align: 'center' },
+                    { title: '预警管理', field: 'COL30', width: 100, rowspan: 1, colspan: 3, halign: 'center', align: 'center' },
+                    ],
+                    [
+                    { title: '采气工艺', field: 'COL2', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '预警开始时间', field: 'COL5', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '预警时长', field: 'COL6', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    {
+                        title: '低电压（V）', field: 'COL14', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center'
+                          , formatter: function (v) {
+                              return (v == "" || v == undefined) ? "" : '<img src="../images/' + v + '.png" />'
+                          }
+                    },
+                    {
+                        title: '超高压（Mpa）', field: 'COL15', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center'
+                          , formatter: function (v) {
+                              return (v == "" || v == undefined) ? "" : '<font color=red>' + v + '</font>'
+                          }
+                    },
+                    {
+                        title: '低液位（m）', field: 'COL16', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center'
+                          , formatter: function (v) {
+                              return (v == "" || v == undefined) ? "" : '<font color=red>' + v + '</font>'
+                          }
+                    },
+                    {
+                        title: '超高温（<sup>。</sup>C）', field: 'COL17', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center'
+                          , formatter: function (v) {
+                              return (v == "" || v == undefined) ? "" : '<font color=red>' + v + '</font>'
+                          }
+                    },
+                    {
+                        title: '确认', field: 'COL18', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center'
+                         , formatter: function (v) {
+                             return (v == "" || v == undefined) ? "" : '<img src="../Scripts/jquery-easyui-1.5.1/themes/icons/ok.png" />'
+                         }
+                    }
+                    , {
+                        title: '处置', field: 'COL19', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center'
+                     , formatter: function (v) {
+                         return (v == "" || v == undefined) ? "" : '<img src="../Scripts/jquery-easyui-1.5.1/themes/icons/ok.png" />'
+                     }
+                    }
+                    , {
+                        title: '关闭', field: 'COL20', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center'
+                     , formatter: function (v) {
+                         return (v == "" || v == undefined) ? "" : '<img src="../Scripts/jquery-easyui-1.5.1/themes/icons/ok.png" />'
+                     }
+                    }
+                    ]
+                ],
+                onLoadSuccess: function (data) {
+                    $("input[name='switchbtn'][tag='关']").switchbutton({
+                        checked: true
+                    });
+                    $("input[name='switchbtn'][tag='开']").switchbutton({
+                        checked: false
+                    });
+                }
+            });
+        }
+        function addZsqj() {
+            openDialog("预警处置管理", 900, 300, "../Yjgl/rwgl_cx_set.html");
+        }
+    </script>
+</body>
+</html>

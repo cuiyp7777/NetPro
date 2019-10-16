@@ -1,0 +1,242 @@
+﻿a {
+    text-decoration: none;
+}
+
+.fa {
+    color: #F5F8FE;
+    font-size: 16px;
+}
+
+.info {
+    font: 14px/ 2em 微软雅黑, 黑体;
+    padding-left: 5px;
+    color: #C1FFFF;
+}
+
+.info_xmmc {
+    font: 18px/ 2em 微软雅黑, 黑体;
+    padding-left: 10px;
+    color: #FFFFFF;
+    align: center;
+    font-weight: bold;
+}
+
+.head {
+    background: #36A9E0;
+}
+
+.head1 {
+    box-sizing: border-box;
+    background: #1D8FC5;
+    padding: 0 5px;
+    height: 30px;
+}
+
+.head_xmmc {
+    box-sizing: border-box;
+    background: #1D8FC5;
+    padding: 0 0px;
+    height: 40px;
+    text-align: center;
+}
+
+.head2 {
+    background: #1D8FC5;
+}
+
+.userInfo {
+    float: left;
+}
+
+.sysBtn {
+    float: right;
+}
+
+.userInfo2 {
+    float: right;
+    position: absolute;
+    top: 8px;
+    right: 130px;
+}
+
+.sysBtn2 {
+    float: right;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+}
+
+.sysBtn .info:hover {
+    text-decoration: underline;
+}
+
+.sysBtn2 .info:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    float: left;
+    background: transparent url(../images/logo.png);
+    background-repeat: no-repeat;
+    height: 65px;
+    width: 566px;
+}
+
+.sysModule {
+    float: right;
+}
+
+#sysModule {
+    list-style: none;
+    margin: 0;
+}
+
+    #sysModule .fa {
+        font-size: 30px;
+    }
+
+    #sysModule li {
+        float: left;
+        margin: 0;
+        padding: 0;
+    }
+
+.module {
+    padding-top: 12px;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 75px;
+    height: 65px;
+}
+
+.module-icon, .module-name {
+    text-align: center;
+}
+
+    .module-icon.hover {
+        position: relative;
+        top: 1px;
+    }
+
+.module-name {
+    color: #CAFFFF;
+    padding-top: 3px;
+}
+
+.module.active {
+    background: #1D8FC5;
+}
+
+.module.hover {
+    background: #36A2D8;
+}
+
+.footer {
+    background: #E9ECF0;
+    color: #8F9095;
+    text-align: center;
+    padding: 7px;
+}
+
+.layout-panel-west .panel-header {
+    height: 18px;
+    background-color: #F6F7F9;
+    background: #F6F7F9;
+}
+
+.layout-expand {
+    background-color: #F6F7F9;
+}
+
+.easyui-accordion .panel-header {
+    height: 28px !important;
+}
+
+.accordion .accordion-header {
+    background: #F5F5F5;
+    filter: none;
+}
+
+.layout-panel-west .panel-header, .panel-body {
+    border-color: #DCDCDC;
+}
+
+.accordion .panel-title {
+    padding-left: 10px;
+    font: 16px/ 2em 微软雅黑, 黑体;
+    color: #797979;
+}
+
+.accordion .fa {
+    color: #797979;
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+.accordion .accordion-header-selected > .panel-title {
+    color: #36ACDA;
+}
+
+.accordion .accordion-header-selected.accordion-header {
+       
+}
+
+.accordion .accordion-header-selected .panel-title .fa {
+    color: #36ACDA;
+}
+
+.tabs-header {
+    background: #F6F7F9;
+}
+
+.tabs-header, .tabs-scroller-left, .tabs-scroller-right, .tabs-tool, .tabs, .tabs-panels, .tabs li a.tabs-inner, .tabs li.tabs-selected a.tabs-inner, .tabs-header-bottom .tabs li.tabs-selected a.tabs-inner, .tabs-header-left .tabs li.tabs-selected a.tabs-inner, .tabs-header-right .tabs li.tabs-selected a.tabs-inner {
+    border-color: #D0D1D3;
+}
+
+    .tabs li a.tabs-inner {
+        background: #F5F5F5;
+        color: #595A5C;
+        filter: none;
+        display: inline-block;
+        text-decoration: none;
+        margin: 0;
+        padding: 0 10px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        white-space: nowrap;
+        border: solid 1px #D0D1D3;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+    }
+
+        .tabs li a.tabs-inner:hover {
+            background: #EFF2F4;
+        }
+
+    .tabs li.tabs-selected a.tabs-inner {
+        color: #595A5C;
+        border-bottom: solid 1px white;
+    }
+
+.tabs-scroller-left, .tabs-scroller-right {
+    background-color: #F5F5F5;
+}
+
+.layout-panel-west {
+    z-index: 1;
+}
+
+.layout-panel-center .tabs-tool {
+    border-width: 0 0 1px 0;
+    background-color: transparent;
+}
+
+.layout-expand .panel-header, .layout-expand .panel-body {
+    border-color: #D0D1D3;
+}
+
+.layout-expand.layout-expand-west, .layout-expand.layout-expand-north {
+    width: 0 !important;
+}

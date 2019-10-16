@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>采气工艺-引射实验井场</title>
+    <link href="../css/bodyCss.css" rel="stylesheet" />
+    <script src="../Scripts/bodyJs.js"></script>
+</head>
+<body>
+    <div id="toolBar">
+        <div class="container-fluid">
+            <div class="row" style="background-color: white; padding-top: 9px;">
+                <div class="col-sm-12">
+                    <div class="form-inline" style="text-align: left;">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon" style="background-color: #f5f5f5"><i class="fa fa-share-alt-square" style="color: #286090"></i>&nbsp;&nbsp;井号:</div>
+                                <input id="paramGCMC" type="text" class="form-control" style="width: 150px;" name="search" placeholder="高庙33-11HF">
+                            </div>
+                            <label for="exampleInputName2">日期：</label>
+                            <input id="dd" type="text" class="easyui-datebox" style="height: 30px; width: 100px;" value="2018-01-01">
+                            <label for="exampleInputName2">-</label>
+                            <input id="Text1" type="text" class="easyui-datebox" style="height: 30px; width: 100px;" value="2018-01-20">
+                        </div>
+                        <div class="form-group">
+                            <div class="dataOpBtns">
+                                <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查询</a>
+                                <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">导出报表</a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="dataOpBtns">
+                                <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-edit'" onclick="javascript:addSetDmgc()">设置</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" style="background-color: white; padding-top: 9px;">
+            <div class="col-lg-2 col-lg-offset-3">
+                <h3>引射实验井场数据监控 <small>2018-08-01</small></h3>
+            </div>
+            <div class="col-sm-12">
+                <table id="_datagrid" style="width: 1200px; height: 680px"></table>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            createTable();
+            $('#_datagrid').datagrid({
+                data: [
+                    { COL0: '2018-05-08', COL1: '高庙33-11HF', COL11: '14:30:00', COL2: '6', COL3: '8', COL4: '2', COL5: '10', COL6: '1500', COL7: '--', COL15: '73' },
+                    { COL0: '2018-05-08', COL1: '义古1-斜1', COL11: '14:30:00', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '', COL15: '49' },
+                    { COL0: '2018-05-08', COL1: '林中14-平18', COL11: '14:30:00', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '', COL15: '22' },
+                    { COL0: '2018-05-08', COL1: '林中13-斜08', COL11: '14:30:00', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL0: '2018-05-08', COL1: '单38-斜4', COL11: '14:30:00', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL0: '2018-05-08', COL1: '罗斜817', COL11: '14:30:00', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL0: '2018-05-08', COL1: '垦西102', COL11: '14:30:00', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL0: '2018-05-08', COL1: '中26-斜544', COL11: '14:30:00', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL0: '2018-05-08', COL1: '东4-斜更511', COL11: '14:30:00', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL0: '2018-05-08', COL1: '南8-斜812', COL11: '14:30:00', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL0: '2018-05-08', COL1: '渤76-斜471', COL11: '14:30:00', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL0: '2018-05-08', COL1: '中1-斜更5', COL11: '14:30:00', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL0: '2018-05-08', COL1: '中19-斜816', COL11: '14:30:00', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL0: '2018-05-08', COL1: '中11-斜516', COL11: '14:30:00', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL0: '2018-05-08', COL1: '南10-斜214', COL11: '14:30:00', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL0: '2018-05-08', COL1: '渤76-平472', COL11: '14:30:00', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' },
+                    { COL0: '2018-05-08', COL1: '垦东641-平9', COL11: '14:30:00', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' }
+                ]
+            });
+        })
+        function createTable() {
+            $('#_datagrid').datagrid({
+                url: '',
+                idField: 'ID',
+                rownumbers: true,
+                border: 1,
+                fit: false,
+                fitColumns: true,
+                singleSelect: true,
+                pageSize: 30,
+                remoteFilter: true,
+                striped: true,
+                pagination: true,
+                frozenColumns: [[
+                    { title: '采集日期', field: 'COL0', width: 80, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '井站名', field: 'COL1', width: 90, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '采集时间', field: 'COL11', width: 80, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                ]],
+                columns: [
+                    [
+                    { title: '一次气', field: 'COL2', width: 100, rowspan: 1, colspan: 5, halign: 'center', align: 'center' },
+                    { title: '二次气', field: 'COL3', width: 100, rowspan: 1, colspan: 5, halign: 'center', align: 'center' },
+                    { title: '出口气', field: 'COL33', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' }
+                    ],
+                    [
+                    { title: '压力<br>Mpa', field: 'COL12', width: 60, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '标况累计流量<br>m<sup>3</sup>', field: 'COL4', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '标况流量（瞬时）<br>m<sup>3</sup>/h', field: 'COL5', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '工况流量（瞬时）<br>m<sup>3</sup>/h', field: 'COL6', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '温度<br><sup>。</sup>C', field: 'COL10', width: 60, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '压力<br>Mpa', field: 'COL12', width: 60, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '标况累计流量<br>m<sup>3</sup>', field: 'COL4', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '标况流量（瞬时）<br>m<sup>3</sup>/h', field: 'COL5', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '工况流量（瞬时）<br>m<sup>3</sup>/h', field: 'COL6', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '温度<br><sup>。</sup>C', field: 'COL10', width: 60, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '压力<br>Mpa', field: 'COL12', width: 60, rowspan: 1, colspan: 1, halign: 'center', align: 'center' }
+                    ]
+                ],
+                onLoadSuccess: function (data) { }
+            });
+        }
+        function addSetDmgc() {
+            openDialog("地面工程实验数据采集设置", 300, 200, "../Gyjk/dmjs_dxl_set.html");
+        }
+        function openDialog(title, width, height, url) {
+            layer.open({
+                type: 2,
+                title: title,
+                shadeClose: true,
+                resize: false,
+                //shade: false,
+                shadeClose: false,
+                maxmin: true, //开启最大化最小化按钮
+                area: [width + 'px', height + 'px'],
+                content: url
+                 , end: function () {
+
+                 }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Sankey</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="../../Scripts/jquery-easyui-1.5.1/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../../Scripts/jquery-easyui-1.5.1/themes/icon.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-easyui-1.5.1/jquery.min.js"></script>
+    <script src="../../Scripts/jquery-easyui-1.5.1/jquery.easyui.min.js"></script>
+    <script src="../../Scripts/jquery-easyui-1.5.1/locale/easyui-lang-zh_CN.js"></script>
+    <script src="../../Scripts/echarts/echarts.js"></script>
+    <script src="../../Scripts/echarts/shine.js" type="text/javascript"></script>
+    <style>
+        body
+        {
+            font-family: "open sans" , "Helvetica Neue" , Helvetica, Arial, sans-serif;
+            font-size: 13px;
+            color: #676a6c;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2" style="margin-left: 300px;">
+                <h2>
+                西北油田分公司电力能流图 </h2>
+            </div>
+            <div class="col-lg-2" style="margin-left: 400px;">
+                开始：<input id="dd" type="text" class="easyui-datebox" value="2017-01-01" style="width: 120px;" />&nbsp;&nbsp;&nbsp;截止：<input
+                    id="Text1" type="text" class="easyui-datebox" value="3/4/2017" style="width: 120px;" />
+            </div>
+        </div>
+        <div class="line">
+            <div id="main" style="height: 600px;">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var dataArr = [
+		  { name: "总电力(总电量：8667212.149999999KW.h)" },
+          { name: "采油一厂" },
+          { name: "采油二厂" },
+          { name: "采油三厂" },
+          { name: "雅克拉采气厂" },
+          { name: "油气运销部" },
+          { name: "油田特种工程管理中心" },
+          { name: "完井测试中心" },
+          { name: "油田治安消防中心" },
+          { name: "基地管理中心" },
+          { name: "顺北油气项目部" },
+
+		  { name: "采油一厂基地" },
+		  { name: "采油一厂油气处理部" },
+		  { name: "采油一厂采油管理一区" },
+		  { name: "采油一厂采油管理二区" },
+		  { name: "采油一厂采油管理三区" },
+		  { name: "采油二厂基地" },
+		  { name: "采油二厂油气处理部" },
+		  { name: "采油二厂采油管理一区" },
+		  { name: "采油二厂采油管理二区" },
+		  { name: "采油二厂采油管理三区" },
+		  { name: "采油三厂基地" },
+		  { name: "采油三厂油气处理部" },
+		  { name: "采油三厂井下作业管理部" },
+		  { name: "采油三厂采油管理一区" },
+		  { name: "采油三厂采油管理二区" },
+		  { name: "采油三厂采油管理二区（十一区）" },
+		  { name: "雅克拉采气厂基地" },
+		  { name: "雅克拉采气厂采油气管理一区" },
+		  { name: "雅克拉采气厂采油气管理二区" },
+		  { name: "油气运销部输油队" },
+		  { name: "油气运销部输气队" },
+		  { name: "油气运销部雅克拉末站" },
+		  { name: "油田特种工程管理中心运输管理部" },
+		  { name: "油田特种工程管理中心供水管理部" },
+		  { name: "油田特种工程管理中心环保管理部" },
+		  { name: "完井测试中心基地" },
+		  { name: "油田治安消防中心治安一队" },
+		  { name: "基地管理中心基地" },
+		  { name: "顺北油气项目部跃进作业区" },
+		  { name: "顺北油气项目部顺北作业区" }
+      ]
+        var linkArr = [
+    	  { source: "总电力(总电量：8667212.149999999KW.h)", target: "采油一厂", value: 1943530 },
+    	  { source: "采油一厂", target: "采油一厂基地", value: 0 },
+    	  { source: "采油一厂", target: "采油一厂油气处理部", value: 348867 },
+    	  { source: "采油一厂", target: "采油一厂采油管理一区", value: 639277.6 },
+    	  { source: "采油一厂", target: "采油一厂采油管理二区", value: 745238.1 },
+    	  { source: "采油一厂", target: "采油一厂采油管理三区", value: 210147.3 },
+    	  { source: "总电力(总电量：8667212.149999999KW.h)", target: "采油二厂", value: 4292918 },
+    	  { source: "采油二厂", target: "采油二厂基地", value: 0 },
+    	  { source: "采油二厂", target: "采油二厂油气处理部", value: 636238 },
+    	  { source: "采油二厂", target: "采油二厂采油管理一区", value: 1086447.2 },
+    	  { source: "采油二厂", target: "采油二厂采油管理二区", value: 1131328.4 },
+    	  { source: "采油二厂", target: "采油二厂采油管理三区", value: 1438904.4 },
+    	  { source: "总电力(总电量：8667212.149999999KW.h)", target: "采油三厂", value: 1155221.45 },
+    	  { source: "采油三厂", target: "采油三厂基地", value: 103856.8 },
+    	  { source: "采油三厂", target: "采油三厂油气处理部", value: 277883 },
+    	  { source: "采油三厂", target: "采油三厂井下作业管理部", value: 86816 },
+    	  { source: "采油三厂", target: "采油三厂采油管理一区", value: 354943.1 },
+    	  { source: "采油三厂", target: "采油三厂采油管理二区", value: 295188.75 },
+    	  { source: "采油三厂", target: "采油三厂采油管理二区（十一区）", value: 36533.8 },
+    	  { source: "总电力(总电量：8667212.149999999KW.h)", target: "雅克拉采气厂", value: 465907.6 },
+    	  { source: "雅克拉采气厂", target: "雅克拉采气厂基地", value: 48458 },
+    	  { source: "雅克拉采气厂", target: "雅克拉采气厂采油气管理一区", value: 318940.3 },
+    	  { source: "雅克拉采气厂", target: "雅克拉采气厂采油气管理二区", value: 98509.3 },
+    	  { source: "总电力(总电量：8667212.149999999KW.h)", target: "油气运销部", value: 383457.9 },
+    	  { source: "油气运销部", target: "油气运销部输油队", value: 138722 },
+    	  { source: "油气运销部", target: "油气运销部输气队", value: 4491.9 },
+    	  { source: "油气运销部", target: "油气运销部雅克拉末站", value: 240244 },
+    	  { source: "总电力(总电量：8667212.149999999KW.h)", target: "油田特种工程管理中心", value: 44506.6 },
+    	  { source: "油田特种工程管理中心", target: "油田特种工程管理中心运输管理部", value: 8167.2 },
+    	  { source: "油田特种工程管理中心", target: "油田特种工程管理中心供水管理部", value: 30523.6 },
+    	  { source: "油田特种工程管理中心", target: "油田特种工程管理中心环保管理部", value: 5815.8 },
+    	  { source: "总电力(总电量：8667212.149999999KW.h)", target: "完井测试中心", value: 1395.6 },
+    	  { source: "完井测试中心", target: "完井测试中心基地", value: 1395.6 },
+    	  { source: "总电力(总电量：8667212.149999999KW.h)", target: "油田治安消防中心", value: 43340 },
+    	  { source: "油田治安消防中心", target: "油田治安消防中心治安一队", value: 43340 },
+    	  { source: "总电力(总电量：8667212.149999999KW.h)", target: "基地管理中心", value: 298771 },
+    	  { source: "基地管理中心", target: "基地管理中心基地", value: 298771 },
+    	  { source: "总电力(总电量：8667212.149999999KW.h)", target: "顺北油气项目部", value: 38164 },
+    	  { source: "顺北油气项目部", target: "顺北油气项目部跃进作业区", value: 3499.2 },
+    	  { source: "顺北油气项目部", target: "顺北油气项目部顺北作业区", value: 34664.8 }
+      ]
+        var myChart = echarts.init(document.getElementById('main'), 'shine');
+        var option = {
+            //            title: { text: '西北油田分公司电力能流图' },
+            tooltip: { trigger: 'item', triggerOn: 'mousemove' },
+            series: [
+                {
+                    type: 'sankey',
+                    layout: 'none',
+                    data: dataArr,
+                    links: linkArr,
+                    itemStyle: {
+                        normal: {
+                            borderWidth: 1, borderColor: '#aaa'
+                        }
+                    },
+                    lineStyle: {
+                        normal: {
+                            color: 'source', curveness: 0.5
+                        }
+                    }
+                }]
+        }
+        myChart.setOption(option);
+
+    </script>
+</body>
+</html>

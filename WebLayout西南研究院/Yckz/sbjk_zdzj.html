@@ -1,0 +1,563 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>采气工艺-积液诊断查询</title>
+    <link href="../css/bodyCss.css" rel="stylesheet" />
+    <script src="../Scripts/bodyJs.js"></script>
+    <script src="../Scripts/echarts/echarts.js"></script>
+    <script src="../Scripts/echarts/shine.js" type="text/javascript"></script>
+    <style>
+        #SbTb th, td
+        {
+            text-align: center;
+        }
+
+        #SbTb input
+        {
+            color: #1E90FF;
+            font-weight: bolder;
+        }
+
+        .CsTb
+        {
+            width: 100%;
+            line-height: 38px;
+        }
+
+            .CsTb tr td:nth-child(2)
+            {
+                color: #006400;
+                font-weight: bolder;
+            }
+
+            .CsTb tr td:nth-child(1), :nth-child(3)
+            {
+                text-align: right;
+            }
+
+            .CsTb tr td:nth-child(1)
+            {
+                font-weight: bolder;
+            }
+
+        .progress-bar-success
+        {
+            background-image: -webkit-linear-gradient(top, #5cb85c 0%, #449d44 100%);
+            background-image: -o-linear-gradient(top, #5cb85c 0%, #449d44 100%);
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#5cb85c), to(#449d44));
+            background-image: linear-gradient(to bottom, #5cb85c 0%, #449d44 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff449d44', GradientType=0);
+            background-repeat: repeat-x;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" style="background-color: white; padding-top: 9px;">
+            <div class="col-lg-12">
+                <div class="form-inline" style="text-align: left;">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon" style="background-color: #f5f5f5"><i class="fa fa-share-alt-square" style="color: #286090"></i>&nbsp;&nbsp;井号:</div>
+                            <input id="paramGCMC" type="text" class="form-control" style="width: 150px;" name="search" placeholder="高庙33-11HF" />
+                        </div>
+                        <label for="exampleInputName2">日期：</label>
+                        <input id="dd" type="text" class="easyui-datebox" style="height: 30px; width: 100px;" value="2018-01-01" />
+                    </div>
+                    <div class="form-group">
+                        <div class="dataOpBtns">
+                            <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-edit'" onclick="javascript:addSetZdzj()">设置</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="background-color: white; padding-top: 9px;">
+            <div class="col-lg-3">
+                <table id="_datagrid" style="width: 100%; height: 700px;"></table>
+            </div>
+            <div class="col-lg-8">
+                <table id="SbTb" class="table table-bordered table-hover">
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>气井参数</th>
+                            <th>装备参数</th>
+                            <th>功能参数</th>
+                            <th>运行状态</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="height: 200px;">
+                            <td style="vertical-align: top;">
+                                <table class="CsTb">
+                                    <colgroup>
+                                        <col style="width: 40%" />
+                                        <col style="width: 30%" />
+                                        <col style="width: 30%" />
+                                    </colgroup>
+                                    <tr>
+                                        <td>时&nbsp;&nbsp;&nbsp;&nbsp;间:</td>
+                                        <td id="tdTime"></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>井&nbsp;&nbsp;&nbsp;&nbsp;名:</td>
+                                        <td style="text-align: left; font-size: 1.2em;" colspan="2">&nbsp;&nbsp;高庙33-11HF</td>
+                                    </tr>
+                                    <tr>
+                                        <td>油&nbsp;&nbsp;&nbsp;&nbsp;压:</td>
+                                        <td></td>
+                                        <td>Mpa</td>
+                                    </tr>
+                                    <tr>
+                                        <td>套&nbsp;&nbsp;&nbsp;&nbsp;压:</td>
+                                        <td></td>
+                                        <td>Mpa</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="vertical-align: top;">
+                                <table class="CsTb">
+                                    <colgroup>
+                                        <col style="width: 40%" />
+                                        <col style="width: 30%" />
+                                        <col style="width: 30%" />
+                                    </colgroup>
+                                    <tr>
+                                        <td>电源电压:</td>
+                                        <td></td>
+                                        <td>V</td>
+                                    </tr>
+                                    <tr>
+                                        <td>单机电流:</td>
+                                        <td></td>
+                                        <td>A</td>
+                                    </tr>
+                                    <tr>
+                                        <td>药箱液位:</td>
+                                        <td></td>
+                                        <td>m</td>
+                                    </tr>
+                                    <tr>
+                                        <td>注剂压力:</td>
+                                        <td></td>
+                                        <td>Mpa</td>
+                                    </tr>
+                                    <tr>
+                                        <td>瞬时排量:</td>
+                                        <td></td>
+                                        <td>L/h</td>
+                                    </tr>
+                                    <tr>
+                                        <td>累积排量:</td>
+                                        <td></td>
+                                        <td>L</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="vertical-align: top;">
+                                <table class="CsTb">
+                                    <colgroup>
+                                        <col style="width: 40%" />
+                                        <col style="width: 30%" />
+                                        <col style="width: 30%" />
+                                    </colgroup>
+                                    <tr>
+                                        <td>加药时长:</td>
+                                        <td></td>
+                                        <td>min</td>
+                                    </tr>
+                                    <tr>
+                                        <td>间隔天数:</td>
+                                        <td></td>
+                                        <td>d</td>
+                                    </tr>
+                                    <tr>
+                                        <td>下次运行:</td>
+                                        <td></td>
+                                        <td>月/日/时</td>
+                                    </tr>
+                                    <tr>
+                                        <td>智能压差阈值:</td>
+                                        <td></td>
+                                        <td>Mpa</td>
+                                    </tr>
+                                    <tr>
+                                        <td>初始时间:</td>
+                                        <td></td>
+                                        <td>时:分</td>
+                                    </tr>
+                                    <tr>
+                                        <td>结束时间:</td>
+                                        <td></td>
+                                        <td>时:分</td>
+                                    </tr>
+                                    <tr>
+                                        <td>置信概率:</td>
+                                        <td></td>
+                                        <td>%</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="vertical-align: top;">
+                                <table class="CsTb">
+                                    <colgroup>
+                                        <col style="width: 40%" />
+                                        <col style="width: 60%" />
+                                    </colgroup>
+                                    <tr>
+                                        <td>液位报警:</td>
+                                        <td>
+                                            <div class="progress" style="width: 99%; margin-top: 14px;">
+                                                <div class="progress-bar progress-bar-danger" role="progressbar"
+                                                    aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                                                    危险
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>超压报警:</td>
+                                        <td>
+                                            <div class="progress" style="width: 99%; margin-top: 14px;">
+                                                <div class="progress-bar progress-bar-warning" role="progressbar"
+                                                    aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                                                    达到预警线
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>电压报警:</td>
+                                        <td>
+                                            <div class="progress" style="width: 99%; margin-top: 14px;">
+                                                <div class="progress-bar progress-bar-success" role="progressbar"
+                                                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                                    正常
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>设备状态:</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>控制方式:</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>运行模式:</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-8">
+                <div id="main" style="height: 400px; width: 1100px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            createTable();
+            $('#_datagrid').datagrid({
+                data: [
+                    { COL1: '高庙33-11HF', COL2: '自动注剂装置', COL3: '73' },
+                    { COL1: '义古1-斜1', COL2: '自动注剂装置', COL3: '正常' },
+                    { COL1: '林中14-平18', COL2: '', COL3: '' },
+                    { COL1: '林中13-斜08', COL2: '', COL3: '' },
+                    { COL1: '单38-斜4', COL2: '', COL3: '' },
+                    { COL1: '罗斜817', COL2: '', COL3: '' },
+                    { COL1: '垦西102', COL2: '', COL3: '' },
+                    { COL1: '中26-斜544', COL2: '', COL3: '' },
+                    { COL1: '东4-斜更511', COL2: '', COL3: '' },
+                    { COL1: '南8-斜812', COL2: '', COL3: '' },
+                    { COL1: '渤76-斜471', COL2: '', COL3: '' },
+                    { COL1: '中1-斜更5', COL2: '', COL3: '' },
+                    { COL1: '中19-斜816', COL2: '', COL3: '' },
+                    { COL1: '中11-斜516', COL2: '', COL3: '' },
+                    { COL1: '南10-斜214', COL2: '', COL3: '' },
+                    { COL1: '渤76-平472', COL2: '', COL3: '' },
+                    { COL1: '垦东641-平9', COL2: '', COL3: '' }
+                ]
+            , onLoadSuccess: function (index, row) {
+                $('#_datagrid').datagrid('selectRow', 0);
+            }
+            });
+            //时间
+            setInterval(function () {
+                var a = new Date();
+                var xATime1 = [PrefixInteger(a.getHours(), 2), PrefixInteger(a.getMinutes(), 2), PrefixInteger(a.getSeconds(), 2)].join(':');
+                $("#tdTime").html("&nbsp;&nbsp;" + xATime1);
+            }, 1000)
+        })
+        function createTable() {
+            $('#_datagrid').datagrid({
+                url: '',
+                idField: 'ID',
+                rownumbers: true,
+                border: 1,
+                fit: false,
+                fitColumns: true,
+                singleSelect: true,
+                pageSize: 30,
+                remoteFilter: true,
+                striped: true,
+                pagination: true,
+                frozenColumns: [[
+                    { title: '井号', field: 'COL1', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                ]],
+                columns: [[
+                    { title: '监控工艺', field: 'COL2', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    {
+                        title: '运行状态', field: 'COL3', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center'
+                         , formatter: function (v) {
+                             if (v == "正常") {
+                                 return v;
+                             }
+                             if (v != '') {
+                                 return '<img src="../images/' + v + '.png" />'
+                             }
+
+                         }
+                    }
+                ]],
+                onLoadSuccess: function (data) { }
+            });
+        }
+        function addSetZdzj() {
+            openDialog("参数设置", 1100, 400, "../Yckz/sbjk_zdzj_set.html");
+        }
+    </script>
+    <script type="text/javascript">
+        //补齐长度
+        function PrefixInteger(num, n) {
+            return (Array(n).join(0) + num).slice(-n);
+        }
+        var myChart = echarts.init(document.getElementById('main'), 'shine');
+        var colors = ['#5793f3', '#d14a61', '#675bba'];
+        var option = {
+            title: {
+                text: '监控曲线',
+            },
+            color: ['red', 'green'],
+            tooltip: {
+                trigger: 'axis',
+                textStyle: {
+                    formatter: 'parseInt({value})'
+                }
+            },
+            grid: {
+                left: 160,
+                top: 60,
+                right: 20,
+                bottom: 20,
+                containLabel: true
+            },
+            //legend: {data: ['油管液面深度', '环空液面深度'] },
+            toolbox: {
+                show: true,
+                feature: {
+                    dataZoom: {
+                        yAxisIndex: 'none'
+                    },
+                    dataView: {
+                        readOnly: false
+                    },
+                    magicType: {
+                        type: ['line', 'bar']
+                    },
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                axisLabel: { interval: 0 },
+                data: [
+                    '2018-05-08 \n08:30:00', '2018-05-08 \n08:30:30', '2018-05-08 \n08:31:00', '2018-05-08 \n08:31:30',
+                    '2018-05-08 \n08:32:00', '2018-05-08 \n08:33:30', '2018-05-08 \n08:34:00', '2018-05-08 \n08:34:30',
+                    '2018-05-08 \n08:35:00', '2018-05-08 \n08:35:30']
+            },
+
+            yAxis: [
+                {
+                    type: 'value',
+                    name: '油压',
+
+                    boundaryGap: [0, 0.1],
+                    position: 'left'
+                },
+                {
+                    type: 'value',
+                    name: '套压',
+                    min: 0,
+                    max: 250,
+                    position: 'left',
+                    offset: 40,
+                    axisLine: {
+                        lineStyle: {
+                            color: colors[0]
+                        }
+                    },
+                    axisLabel: {
+                        formatter: '{value}'
+                    }
+                }
+                ,
+                {
+                    type: 'value',
+                    name: '电源电压',
+                    min: 0,
+                    max: 220,
+                    position: 'left',
+                    offset: 80,
+                    axisLine: { lineStyle: { color: colors[1] } },
+                    axisLabel: { formatter: '{value}' }
+                }
+                ,
+                {
+                    type: 'value',
+                    name: '药箱液位',
+                    min: 0,
+                    max: 220,
+                    position: 'left',
+                    offset: 140,
+                    axisLine: { lineStyle: { color: colors[2] } },
+                    axisLabel: { formatter: '{value}' }
+                }
+                 ,
+                {
+                    type: 'value',
+                    name: '注剂压力',
+                    min: 0,
+                    max: 20,
+                    position: 'left',
+                    offset: 190,
+                    axisLine: { lineStyle: { color: colors[1] } },
+                    axisLabel: { formatter: '{value}' }
+                }
+                 ,
+                {
+                    type: 'value',
+                    name: '瞬时排量',
+                    min: 0,
+                    max: 50,
+                    position: 'left',
+                    offset: 250,
+                    axisLine: { lineStyle: { color: colors[1] } },
+                    axisLabel: { formatter: '{value}' }
+                }
+                 ,
+                {
+                    type: 'value',
+                    name: '单次加药量',
+                    position: 'left',
+                    min: 0,
+                    max: 50,
+                    offset: 310,
+                    axisLine: { lineStyle: { color: colors[1] } },
+                    axisLabel: { formatter: '{value}' }
+                }
+            ],
+
+            series: [{
+                name: '油压',
+                type: 'line',
+                z: 10,
+                type: 'line',
+                data: [10, 30, 30, 90, 30, 30, 60, 30, 30, 60]
+            },
+            {
+                name: '套压',
+                type: 'line',
+                data: [150, 140, 130, 180, 170, 150, 200, 170, 190, 200]
+            }
+            ,
+            {
+                name: '电源电压',
+                type: 'line',
+                data: [220, 210, 210, 180, 220, 150, 220, 200, 190, 200]
+            }
+            , {
+                name: '药箱液位',
+                type: 'line',
+                data: [220, 210, 210, 180, 220, 150, 220, 200, 190, 200]
+            }
+            , {
+                name: '注剂压力',
+                type: 'line',
+                data: [20, 10, 10, 18, 22, 15, 2, 20, 19, 20]
+            }
+            , {
+                name: '瞬时排量',
+                type: 'line',
+                data: [20, 10, 10, 18, 22, 15, 2, 20, 19, 20]
+            }
+            , {
+                name: '单次加药量',
+                type: 'line',
+                data: [20, 10, 10, 18, 22, 15, 2, 20, 19, 20]
+            }
+            ]
+        };
+
+
+        var x_time = new Date('05/08/2018 08:35:30');
+        // 循环控制数据
+        setInterval(function () {
+            var myDate = new Date();
+            var a = x_time.valueOf() + 30 * 1000
+            a = new Date(a)
+            x_time = a;
+            var xATime = [a.getFullYear(), PrefixInteger(a.getMonth() + 1, 2), PrefixInteger(a.getDate(), 2)].join('-') + "\n "
+                + [PrefixInteger(a.getHours(), 2), PrefixInteger(a.getMinutes(), 2), PrefixInteger(a.getSeconds(), 2)].join(':');
+            //x轴
+            option.xAxis.data.shift();
+            //option.xAxis.data.push('第' + i + '天');
+            option.xAxis.data.push(xATime);
+
+            //y1
+            option.series[0].data.shift();
+            option.series[0].data.push(parseInt(Math.random() * (90 - 10 + 1) + 90, 10));
+            //2
+            option.series[1].data.shift();
+            option.series[1].data.push(parseInt(Math.random() * (200 - 130 + 1) + 200, 10));
+            //3
+            option.series[2].data.shift();
+            option.series[2].data.push(parseInt(Math.random() * (220 - 150 + 1) + 220, 10));
+            //4
+            option.series[3].data.shift();
+            option.series[3].data.push(parseInt(Math.random() * (220 - 150 + 1) + 220, 10));
+            //5
+            option.series[4].data.shift();
+            option.series[4].data.push(parseInt(Math.random() * (20 - 0 + 1) + 20, 10));
+            //6
+            option.series[5].data.shift();
+            option.series[5].data.push(parseInt(Math.random() * (50 - 0 + 1) + 50, 10));
+            //7
+            option.series[6].data.shift();
+            option.series[6].data.push(parseInt(Math.random() * (50 - 0 + 1) + 50, 10));
+            myChart.setOption(option);
+
+
+        }, 5000)
+
+        myChart.setOption(option);
+    </script>
+</body>
+</html>

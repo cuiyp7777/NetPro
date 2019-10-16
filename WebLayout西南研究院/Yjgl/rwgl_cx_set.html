@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>采气工艺-泡排加注自控</title>
+    <link href="../css/bodyCss.css" rel="stylesheet" />
+    <script src="../Scripts/bodyJs.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" style="background-color: white; padding-top: 9px;">
+            <div class="col-sm-4">
+                <div class="form-inline" style="text-align: left;">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon" style="background-color: #f5f5f5"><i class="fa fa-share-alt-square" style="color: #286090"></i>&nbsp;&nbsp;确认</div>
+                            <!--<img src="../images/right.GIF" style="height: 20px; margin-left: 20px;" />-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-inline" style="text-align: left;">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon" style="background-color: #f5f5f5"><i class="fa fa-share-alt-square" style="color: #286090"></i>&nbsp;&nbsp;处置</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-inline" style="text-align: left;">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon" style="background-color: #f5f5f5"><i class="fa fa-share-alt-square" style="color: #286090"></i>&nbsp;&nbsp;关闭</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="background-color: white; padding-top: 9px; line-height: 30px;">
+            <div class="col-sm-4">
+                <div class="form-inline">
+                    <label>预警类型：</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-inline">
+                    <label>开始时间：</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-inline">
+                    <label>持续时间：</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-inline">
+                    <label>确认时间：</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-inline">
+                    <label>确认人员：</label>
+                    <input type="text" class="form-control" />
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-inline">
+                    <label>处置时间：</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-inline">
+                    <label>处置人员：</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-inline">
+                    <label>处置措施：</label>
+                    <input type="text" class="form-control" style="height: 100px;" />
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-inline">
+                    <label>关闭时间：</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-inline">
+                    <label>操作人员：</label>
+                    <input type="text" class="form-control" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="background-color: white; padding-top: 9px;">
+            <div class="col-sm-3  col-sm-offset-5">
+                <div class="form-group">
+                    <button id='_svBtn' class="btn btn-primary" type="submit">确定</button>
+                    <button id='_clBtn' class="btn btn-white" type="button">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function addCor() {
+            openDialog("详细信息", $('body').width() * 0.98, $('body').height() * 0.98, "/Yjgl/rwgl_cx_set.html");
+        }
+
+    </script>
+    <script src="../Scripts/jquery.layout-1.4/jquery.layout.js"></script>
+</body>
+</html>

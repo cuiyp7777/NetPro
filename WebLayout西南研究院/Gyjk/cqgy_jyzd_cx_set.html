@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>采气工艺-泡排加注自控</title>
+    <link href="../css/bodyCss.css" rel="stylesheet" />
+    <script src="../Scripts/bodyJs.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" style="background-color: white; padding-top: 9px;">
+            <div class="col-sm-6">
+                <div class="form-inline" style="text-align: left;">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon" style="background-color: #f5f5f5"><i class="fa fa-share-alt-square" style="color: #286090"></i>&nbsp;&nbsp;井的基本参数</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-inline" style="text-align: left;">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon" style="background-color: #f5f5f5"><i class="fa fa-share-alt-square" style="color: #286090"></i>&nbsp;&nbsp;液位监测仪器设置</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="background-color: white; padding-top: 9px;">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>层位：</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>油/套管内径（mm）：</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>油套连通位置（m）：</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>产层深度（m）：</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>油管底界（m）：</label>
+                    <input type="text" class="form-control" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>触发时间：</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>触发间隔：</label>
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>液位修正：</label>
+                    <input type="text" class="form-control" style="width: 60%;" />
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-info" onclick="javascript:addCor()">修正</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="row" style="background-color: white; padding-top: 9px;">
+            <div class="col-sm-3  col-sm-offset-5">
+                <div class="form-group">
+                    <button id='_svBtn' class="btn btn-primary" type="submit">确定</button>
+                    <button id='_clBtn' class="btn btn-white" type="button">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function addCor() {
+            openDialog("液位修正", $('body').width() * 0.98, $('body').height() * 0.98, "../Gyjk/cqgy_jyzd_cx_ywxz.html");
+        }
+
+    </script>
+    <script src="../Scripts/jquery.layout-1.4/jquery.layout.js"></script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="../css/bodyCss.css" rel="stylesheet" />
+    <script src="../Scripts/bodyJs.js"></script>
+    
+    <style>
+        .table th, .table td, .table caption
+        {
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <form class="form-inline" style="margin-left: 10px; margin-top: 30px;">
+                    <div class="form-group">
+                        <label for="exampleInputName2">井号：</label>
+                        <input type="text" class="form-control" id="exampleInputName2" placeholder="井号" style="width: 150px;">
+                        <label for="exampleInputName2">日期：</label>
+                        <input id="dd" type="text" class="easyui-datebox" style="height: 30px; width: 100px;" value="2018-01-01">
+                        <label for="exampleInputName2">-</label>
+                        <input id="Text1" type="text" class="easyui-datebox" style="height: 30px; width: 100px;" value="2018-01-20">
+                    </div>
+                    <button type="submit" class="btn btn-default">查询</button>
+                    <button type="button" class="btn btn-primary">导出报表</button>
+                </form>
+            </div>
+            <div class="col-lg-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10">
+                <table class="table table-bordered table-hover">
+                    <caption>
+                        <h4>采气工艺远程数据监控 <small>2018-08</small></h4>
+                    </caption>
+                    <colgroup>
+                        <col style="width: 6%">
+                        <col style="width: 4%">
+                        <col style="width: 4%">
+                        <col style="width: 4%">
+                        <col style="width: 4%">
+                        <col style="width: 6%">
+                        <col style="width: 6%">
+                        <col style="width: 4%">
+                        <col style="width: 4%">
+                        <col style="width: 4%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <td rowspan="2" colspan="1">单位</td>
+                            <th rowspan="2" colspan="1">油气产量<br />
+                                （吨）</th>
+                            <th rowspan="1" colspan="3">采气工艺</th>
+                            <th rowspan="1" colspan="2">地面工程</th>
+                            <th rowspan="1" colspan="2">水（硫）</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="1" colspan="1">积液诊断</td>
+                            <td rowspan="1" colspan="1">泡排加注</td>
+                            <td rowspan="1" colspan="1">柱塞气举</td>
+                            <td rowspan="1" colspan="1">多相流试验</td>
+                            <td rowspan="1" colspan="1">引射试验</td>
+                            <td rowspan="1" colspan="1">气田水水样</td>
+                            <td rowspan="1" colspan="1">生物除硫</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="index_zhnh_1.html">采油一厂</a></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>采油二厂</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>采油三厂</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>雅厂</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>汇总</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <!--<div class="col-lg-1" style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
+                空闲
+            </div>-->
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                第&nbsp;1&nbsp;到&nbsp;10&nbsp;条记录，共&nbsp;200&nbsp;条，每页显示&nbsp;<select><option>10</option>
+                </select>&nbsp;条
+            </div>
+            <div class="col-lg-6">
+                <nav aria-label="Page navigation" style="float: right; margin-top: -20px;">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">首页</span>
+                            </a>
+                        </li>
+                        <li><a href="#">上一页</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">...</a></li>
+                        <li><a href="#">18</a></li>
+                        <li><a href="#">19</a></li>
+                        <li><a href="#">20</a></li>
+                        <li><a href="#">下一页</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">尾页</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div id="toolBar">
+        <div class="container-fluid">
+            <div class="row" style="border-top: 2px solid #3A8EBA; background-color: white; padding-top: 9px;">
+                <div class="col-sm-12">
+                    <div class="form-inline" style="text-align: right;">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon" style="background-color: #f5f5f5"><i class="fa fa-share-alt-square" style="color: #286090"></i>&nbsp;&nbsp;工程:</div>
+                                <input id="paramGCMC" type="text" class="form-control" style="width: 150px;" name="search" placeholder="工程名称">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="dataOpBtns">
+                                <button onclick="toolBarCommand.search();" class="btn btn-success" style="">查询</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div id="dataOpBtns" class="btn-group dataOpBtns tip" style="margin-left: 5px;">
+                                <button id="btnAdd" onclick="javascript:add()" class="btn btn-success btn-outline" title1="新增"><i class="fa fa-plus"></i></button>
+                                <button id="btnEdit" onclick="javascript:add()" class="btn btn-success btn-outline" title1="编辑"><i class="fa fa-edit"></i></button>
+                                <button id="btnDel" onclick="javascript:add()" class="btn btn-success btn-outline" title1="删除"><i class="fa fa-remove"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div id="dataOpBtns2" class="btn-group dataOpBtns tip" style="margin-left: 5px;">
+                                <button id="btnImport" onclick="javascript:toolBarCommand.import()" class="btn btn-success btn-outline" title1="导入数据"><i class="fa fa-sign-in"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" style="background-color: white; padding-top: 9px;">
+            <div class="col-sm-12">
+                <table id="_datagrid" style="width: 1200px; height: 300px"></table>
+            </div>
+        </div>
+    </div>
+    <script>
+        $.fn.datebox.defaults.formatter = function (date) {
+            var y = date.getFullYear();
+            var m = date.getMonth() + 1;
+            var d = date.getDate();
+            return y + '-' + m + '-' + d;
+        }
+
+        $(function () {
+            createTable();
+            $('#_datagrid').datagrid({
+                data: [
+                    { COL1: 'value11', COL2: 'value12', COL3: 'value12', COL4: 'value12' },
+                    { COL1: 'value11', COL2: 'value12', COL3: 'value12', COL4: 'value12' }
+                ]
+            });
+        })
+        function createTable() {
+            $('#_datagrid').datagrid({
+                url: '',
+                idField: 'ID',
+                rownumbers: true,
+                border: 1,
+                fit: false,
+                fitColumns: true,
+                singleSelect: true,
+                pageSize: 30,
+                remoteFilter: true,
+                striped: true,
+                pagination: true,
+                frozenColumns: [[
+                    { title: '字段0', field: 'COL1', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                ]],
+                columns: [[
+                    { title: '字段1', field: 'COL2', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '字段2', field: 'COL3', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '字段3', field: 'COL4', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' }
+                ]],
+                onLoadSuccess: function (data) { }
+            });
+        }
+        function add() {
+            openDialog("导入数据", $('body').width() * 0.9, $('body').height() * 0.9, "/content1/dl/dl_sankey.html");
+        }
+        function openDialog(title, width, height, url) {
+            width = width < 920 ? 920 : width;
+            height = height < 430 ? 430 : height;
+            layer.open({
+                type: 2,
+                title: title,
+                shadeClose: true,
+                resize: false,
+                //shade: false,
+                shadeClose: false,
+                maxmin: true, //开启最大化最小化按钮
+                area: [width + 'px', height + 'px'],
+                content: url
+                 , end: function () {
+
+                 }
+            });
+        }
+    </script>
+</body>
+</html>

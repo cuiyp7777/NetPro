@@ -1,0 +1,64 @@
+﻿/*----------------------------------------------------------
+
+----------------------------------------------------------*/
+body{ font-size: 12px;}
+*{ font-size: 12px;}
+.h_gap{ height: 10px;overflow:hidden}
+
+a:link {color: #034af3;text-decoration: underline;}
+a:visited {color: #505abc;}
+a:hover {color: #1d60ff;text-decoration: none;}
+a:active {color: #12eb87;}
+
+.kcsl{ width: 35px; height: 19px;line-height:19px \9;color: #555;border: 1px solid blue;padding:0}
+.searchDiv{ text-align: right;padding: 3px;font-size: 12px;}
+/*************长度共同共通样式 ********************/
+.A_Width{ width: 80px;}
+.B_Width{ width: 150px;}
+.C_Width{ width: 200px;}
+.D_Width{ width: 250px;}
+
+.main{padding: 3px;}
+
+.alert{background:#FFE5D6}
+/*************表格共通样式 ********************/
+ table{border-collapse:collapse; }
+.border th{border:1px solid black}
+.border td{border:1px solid black}
+
+
+/*************CHECK共通样式  ********************/
+.checkUl{}
+.checkUl li {float:left;*float:none;*display:inline;*zoom:1;margin-left: 3px;list-style:none} 
+.checkUl li  { font-family: Courier New,Arial;color: #fff;background-color: #3967DE;padding: 3px 5px;text-decoration: none;}
+
+/*************DIV 表格共通样式  ********************/
+.div_table{}
+.div_row{ padding: 5px;}
+.div_table_name{ width: 80px;display: inline-block; text-align:left }
+
+/*************Velocity分页样式 ********************/
+.pageDiv{*text-align:center;margin: 5px auto;}
+.pager  {display:table;margin: 0 auto;font-size: 12px;height: 20px;} 
+.pager li {float:left;*float:none;*display:inline;*zoom:1;margin-left: 1px;list-style: none;height: 20px;line-height: 20px;} 
+.pager li.current a {color: #fff;background: #cd4900;}
+.pager li a:hover {color: #000;}
+.pager li a { font-family: Courier New,Arial;color: #58595b;background-color: #f0f0f0;padding: 3px 5px;text-decoration: none;}
+.pager li.prev a {background-color: #cccccc;color: #666666;}
+.pager li.next a {background-color: #cccccc;color: #666666;}
+
+/*************表单样式***********************/
+.formBody{ padding: 10px;}
+.formField{ border: 1px solid #64AAED;margin: 0px;padding: 10px;background:#F0F0F0}
+.formTitle{ border: 1px solid #0F5FAF;background-color: #3A9AE6;padding:5px 10px;font-weight: bold;color:#fff}
+.formTable{ border: 0px;width: 100%;border-collapse: collapse;}
+.formTable td{ border: 2px solid #fff;font-size: 12px;height: 26px;line-height: 26px;padding: 3px;}
+.formTable .formName{ background: #E4E9EF;text-align: right;width: 150px; }
+.formFoot{ width: 100%; text-align:center}
+/*********************ZTREE***********************/
+.ztreeSel {margin-top: 10px;border: 1px solid #617775;background: #f0f6e4;width:220px;height:200px;overflow-y:scroll;overflow-x:auto;}
+
+.util_search{background:#F4F4F4;padding:10px;}
+.util_title{text-align: center; color:#CC0000; font-size: 28px;font-weight: bold;padding: 10px;}
+.util_dataBody{ padding: 10px;}
+.util_dataHead{ height: 100px;}

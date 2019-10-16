@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>采气工艺-积液诊断查询</title>
+    <link href="../css/bodyCss.css" rel="stylesheet" />
+    <script src="../Scripts/bodyJs.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" style="background-color: white; padding-top: 9px;">
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label>井号：</label>
+                    <input id="ZsqjSet_ID1" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>周期时长（h）：</label>
+                    <input id="ZsqjSet_ID2" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>关井时长（h）：</label>
+                    <input id="ZsqjSet_ID3" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>安全压力值（MPa）：</label>
+                    <input id="ZsqjSet_ID4" type="text" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>过快上升时间（min）：</label>
+                    <input id="ZsqjSet_ID5" type="text" class="form-control" />
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label>采样间隔：</label>
+                        <select class="form-control">
+                            <option>每5秒采样</option>
+                            <option>每20秒采样</option>
+                            <option>每60秒采样</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>开井存储间隔：</label>
+                        <select class="form-control">
+                            <option>每1分钟存储</option>
+                            <option>每1分钟存储</option>
+                            <option>每1分钟存储</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>关井存储间隔：</label>
+                        <select class="form-control">
+                            <option>每1分钟存储</option>
+                            <option>每1分钟存储</option>
+                            <option>每1分钟存储</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row" style="background-color: white; padding-top: 9px;">
+            <div class="col-sm-6  col-sm-offset-2">
+                <div class="form-group">
+                    <button id='_svBtn' class="btn btn-primary" type="submit">确定</button>
+                    <button id='_clBtn' class="btn btn-white" type="button">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" style="background-color: white; padding-top: 9px;">
+            <div class="col-sm-12">
+                <div class="form-inline" style="text-align: left;">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon" style="background-color: #f5f5f5"><i class="fa fa-share-alt-square" style="color: #286090"></i>&nbsp;&nbsp;井号:</div>
+                            <input id="paramGCMC" type="text" class="form-control" style="width: 150px;" name="search" placeholder="高庙33-11HF">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="dataOpBtns">
+                            <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'" onclick="javascript:add()">查询</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" style="background-color: white; padding-top: 9px;">
+            <div class="col-sm-12">
+                <table id="_datagrid" style="width: 1200px; height: 120px"></table>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            createTable();
+            $('#_datagrid').datagrid({
+                data: [
+                    { COL1: '高庙33-11HF', COL2: '6', COL3: '8', COL4: '2', COL5: '10', COL6: '1500', COL7: '90' },
+                    { COL1: '义古1-斜1', COL2: '', COL3: '', COL4: '', COL5: '', COL6: '', COL7: '' }
+                ]
+             , onDblClickRow: function (index, row) {
+                 $("#ZsqjSet_ID1").val(row.COL1);
+                 $("#ZsqjSet_ID2").val(row.COL2);
+                 $("#ZsqjSet_ID3").val(row.COL5);
+                 $("#ZsqjSet_ID4").val(row.COL6);
+                 $("#ZsqjSet_ID4").val(row.COL7);
+             }
+            });
+        })
+        function createTable() {
+            $('#_datagrid').datagrid({
+                url: '',
+                idField: 'ID',
+                rownumbers: true,
+                border: 1,
+                fit: false,
+                fitColumns: true,
+                singleSelect: true,
+                pageSize: 30,
+                remoteFilter: true,
+                striped: true,
+                pagination: false,
+                frozenColumns: [[
+                    { title: '井号', field: 'COL1', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                ]],
+                columns: [
+                    [
+                    { title: '周期时长（h）', field: 'COL4', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '关井时长（h）', field: 'COL5', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '安全压力值（MPa）', field: 'COL6', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '过快上升时间（min）', field: 'COL7', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '采样间隔', field: 'COL9', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '存储间隔', field: 'COL10', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' },
+                    { title: '...', field: 'COL11', width: 100, rowspan: 1, colspan: 1, halign: 'center', align: 'center' }
+                    ]
+                ],
+                onLoadSuccess: function (data) { }
+            });
+        }
+    </script>
+    <script src="../Scripts/jquery.layout-1.4/jquery.layout.js"></script>
+</body>
+</html>

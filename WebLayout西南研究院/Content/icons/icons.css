@@ -1,0 +1,10 @@
+﻿.icon12{ display: inline-block;zoom: 1;*display: inline;overflow:hidden;height: 12px;width: 12px;background: url('img/icons.png') no-repeat top left;cursor: pointer;margin-top: 6px /9;}
+
+.icon-add{background-position:0px -12px}
+.icon-add:hover{background-position:-12px -12px}
+
+.icon-del{background-position:0px 0px}
+.icon-del:hover{background-position:-12px 0px}
+
+.icon-edit{ background-position: 0px -48px}
+.icon-edit:hover{ background-position: -12px -48px}

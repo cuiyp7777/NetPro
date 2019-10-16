@@ -1,0 +1,306 @@
+/**.topDiv{background:url(/Content/img/top/top_back.gif) repeat-x; height:92px;}**/
+.topDiv
+{
+    background: #1D8FC5;
+    height: 60px;
+    position: relative;
+}
+.top-btn
+{
+    display: inline-block;
+    width: 95px;
+    height: 92px;
+}
+.logoPanel
+{
+    padding: 5px;
+    padding-left: 8px;
+}
+.logo
+{
+    width: 48px;
+    height: 48px;
+}
+.sysname
+{
+    color: white;
+    font-family: "Microsoft YaHei";
+    font-size: 26px;
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    left: 65px;
+}
+/**top-right-menu**/
+.fa
+{
+    color: #FFFFFF;
+    font-size: 14px;
+}
+#sysModule .user-box .fa
+{
+    color: #B4B4B4;
+    font-size: 20px;
+}
+
+
+.sysModule
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.ui-layout-north.ui-layout-pane
+{
+    background: #FFF;
+    border: 1px solid #8DB2E3;
+    padding: 0px;
+    overflow: visible;
+    z-index: 3 !important;
+}
+#sysModule
+{
+    list-style: none;
+    margin: 0;
+}
+
+#sysModule .fa
+{
+    font-size: 28px;
+}
+
+#sysModule li
+{
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+#sysModule .module-menu
+{
+    width: 180px;
+    height: 60px;
+    background-color: #1D8FC5;
+    border-left: 1px #43B1E7 solid;
+    display: block;
+    cursor: default;
+}
+#sysModule .module-menu:hover
+{
+    background: #1F95CB;
+}
+
+.module-menu .userico
+{
+    width: 45px;
+    height: 46px;
+    float: left;
+    background: url(userico.png);
+    margin: 6px 2px 0 10px;
+}
+.module-menu .username
+{
+    float: left;
+    margin: 10px 6px 0 6px;
+}
+.module-menu .username h1, .module-menu .username h2
+{
+    color: #FFF;
+    font-size: 16px;
+    width: 90px;
+    height: 22px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    white-space: nowrap;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.module-menu .username h2
+{
+    font-size: 14px;
+}
+
+.module-menu .userdown
+{
+    float: left;
+    width: 19px;
+    height: 19px;
+    background: url(down.gif);
+    margin-top: 20px;
+}
+
+.module-menu .user-box
+{
+    display: none;
+    position: absolute;
+    width: 180px;
+    top: 58px;
+    right: 56px;
+    z-index: 9999;
+}
+
+.module-menu:hover .user-box
+{
+    display: block;
+}
+.module-menu .user-box
+{
+    display: none;
+    position: absolute;
+    width: 180px;
+    top: 60px;
+    right: 5px;
+    z-index: 9999;
+}
+.module-menu .user-box .arrow
+{
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 80px;
+    width: 21px;
+    height: 11px;
+    background: url(upinfo.png) no-repeat center;
+}
+.module-menu .user-box .user-item
+{
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #b1b1b1;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+.module-menu .user-box .user-item a
+{
+    display: block;
+    padding: 5px 15px;
+    color: #222;
+    line-height: 1em;
+    text-decoration: none;
+    text-align: left;
+    white-space: nowrap;
+}
+.module-menu .user-box .user-item a:hover
+{
+    text-decoration: none;
+    background: #cdeeff;
+}
+.module-menu .user-box .user-item a img
+{
+    margin-bottom: 4px;
+    margin-right: 5px;
+    margin-left: 15px;
+}
+.module-menu .user-box .user-item a b
+{
+    font-weight: normal;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.module
+{
+    padding-top: 12px;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 80px;
+    height: 60px;
+    border-left: 1px #43B1E7 solid;
+    border-right: 1px #1078AC solid;
+}
+.module-head
+{
+    height: 60px;
+    border-right: 1px #1078AC solid;
+}
+
+.module-icon, .module-name
+{
+    text-align: center;
+}
+
+.module-icon.hover
+{
+    position: relative;
+    top: 1px;
+}
+
+.module-name
+{
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.module.active
+{
+    background: #36A9E0;
+}
+
+.module.hover
+{
+    background: #36A2D8;
+}
+#sub-menu
+{
+    height: 100%;
+}
+#sub-menu li
+{
+    float: left;
+    height: 100%;
+    margin-left: 0;
+    color: white;
+    box-sizing: border-box;
+}
+#sub-menu li:hover
+{
+    background: #2198CE;
+}
+#sub-menu li.active
+{
+    background: #ED8E43;
+}
+#sub-menu li .menu-item
+{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#sub-menu li a:link
+{
+    color: #fff;
+    text-decoration: none;
+}
+#sub-menu li a:visited
+{
+    color: #fff;
+}
+#sub-menu li a:hover
+{
+    color: #fff;
+}
+#sub-menu li a:active
+{
+    color: #fff;
+}
+#sub-menu .fa
+{
+    font-size: 6px;
+    position: relative;
+    top: -1px;
+    margin-right: 2px;
+}
+#menuloading .fa
+{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,1392 @@
+html {
+	margin: 0px; padding: 0px;
+}
+body {
+	margin: 0px; padding: 0px;
+}
+div {
+	margin: 0px; padding: 0px;
+}
+dl {
+	margin: 0px; padding: 0px;
+}
+dt {
+	margin: 0px; padding: 0px;
+}
+dd {
+	margin: 0px; padding: 0px;
+}
+ul {
+	margin: 0px; padding: 0px;
+}
+ol {
+	margin: 0px; padding: 0px;
+}
+li {
+	margin: 0px; padding: 0px;
+}
+h1 {
+	margin: 0px; padding: 0px;
+}
+h2 {
+	margin: 0px; padding: 0px;
+}
+h3 {
+	margin: 0px; padding: 0px;
+}
+h4 {
+	margin: 0px; padding: 0px;
+}
+h5 {
+	margin: 0px; padding: 0px;
+}
+h6 {
+	margin: 0px; padding: 0px;
+}
+form {
+	margin: 0px; padding: 0px;
+}
+input {
+	margin: 0px; padding: 0px;
+}
+em {
+	margin: 0px; padding: 0px;
+}
+textarea {
+	margin: 0px; padding: 0px;
+}
+p {
+	margin: 0px; padding: 0px;
+}
+th {
+	margin: 0px; padding: 0px;
+}
+td {
+	margin: 0px; padding: 0px;
+}
+span {
+	margin: 0px; padding: 0px;
+}
+i {
+	margin: 0px; padding: 0px;
+}
+body {
+	font: 12px/normal microsoft yahei, Tahoma, Verdana, Arial, sans-serif; color: rgb(132, 133, 133); -ms-word-break: break-all; -ms-word-wrap: break-word; font-size-adjust: none; font-stretch: normal;
+}
+body {
+	padding: 0px 13px;
+}
+h1 {
+	font-size: 100%;
+}
+h2 {
+	font-size: 100%;
+}
+h3 {
+	font-size: 100%;
+}
+h4 {
+	font-size: 100%;
+}
+h5 {
+	font-size: 100%;
+}
+h6 {
+	font-size: 100%;
+}
+ol {
+	list-style: none;
+}
+ul {
+	list-style: none;
+}
+li {
+	list-style: none;
+}
+em {
+	font-style: normal; font-weight: normal;
+}
+i {
+	font-style: normal; font-weight: normal;
+}
+b {
+	font-style: normal; font-weight: normal;
+}
+select {
+	color: rgb(102, 102, 102); font-family: arial,helvetica,clean,sans-serif; vertical-align: middle; -ms-overflow-y: auto;
+}
+button {
+	color: rgb(102, 102, 102); font-family: arial,helvetica,clean,sans-serif; vertical-align: middle; -ms-overflow-y: auto;
+}
+input {
+	color: rgb(102, 102, 102); font-family: arial,helvetica,clean,sans-serif; vertical-align: middle; -ms-overflow-y: auto;
+}
+textarea {
+	color: rgb(102, 102, 102); font-family: arial,helvetica,clean,sans-serif; vertical-align: middle; -ms-overflow-y: auto;
+}
+label {
+	color: rgb(102, 102, 102); font-family: arial,helvetica,clean,sans-serif; vertical-align: middle; -ms-overflow-y: auto;
+}
+img {
+	border: 0px currentColor; border-image: none;
+}
+table {
+	border-collapse: collapse; border-spacing: 0;
+}
+a {
+	color: rgb(132, 133, 133); text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:focus {
+	-moz-outline: none;
+}
+body {
+	font-size: 12px;
+}
+#MyTreeSpan {
+	cursor: pointer;
+}
+.red {
+	color: rgb(255, 0, 0);
+}
+.inputfile {
+	padding: 2px;
+}
+.inp-check {
+	vertical-align: text-bottom;
+}
+.txtraea {
+	padding: 3px; border: 1px solid rgb(216, 216, 216); border-image: none;
+}
+.center {
+	text-align: center;
+}
+.vlm {
+	vertical-align: middle;
+}
+.tx_right {
+	text-align: right;
+}
+.clear {
+	-ms-zoom: 1;
+}
+.new_item {
+	-ms-zoom: 1;
+}
+.feed {
+	-ms-zoom: 1;
+}
+.f_feed {
+	-ms-zoom: 1;
+}
+.basic_row {
+	-ms-zoom: 1;
+}
+.containter {
+	-ms-zoom: 1;
+}
+.clear_fix {
+	height: 0px; line-height: 0; clear: both; font-size: 0px; visibility: hidden;
+}
+.clear::after {
+	height: 0px; line-height: 0; clear: both; display: block; visibility: hidden; content: ".";
+}
+.containter::after {
+	height: 0px; line-height: 0; clear: both; display: block; visibility: hidden; content: ".";
+}
+.indent {
+	text-indent: 2em;
+}
+.mt12 {
+	margin-top: 12px;
+}
+.ml10 {
+	margin-left: 10px;
+}
+.mt15 {
+	margin-top: 20px;
+}
+.mt40 {
+	margin-top: 40px;
+}
+.ml20 {
+	margin-left: 48px;
+}
+.mr5 {
+	margin-right: 5px;
+}
+.mr10 {
+	margin-right: 10px;
+}
+.mb10 {
+	margin-bottom: 10px;
+}
+.blue-btn {
+	background: url("../images/icon.png") 0px -97px; height: 38px; line-height: 38px; padding-left: 14px; display: inline-block;
+}
+.blue-btn span {
+	background: url("../images/icon.png") 0px -97px; height: 38px; line-height: 38px; padding-left: 14px; display: inline-block;
+}
+.blue-btn span {
+	background-position: right -145px; padding: 0px 35px 0px 21px; color: rgb(255, 255, 255); font-size: 14px;
+}
+.hide {
+	display: none;
+}
+.hides {
+	display: none;
+}
+.l {
+	float: left;
+}
+.r {
+	float: right;
+}
+.wrap {
+	margin: 0px auto; width: 960px;
+}
+.input_word01 {
+	width: 340px; color: rgb(137, 137, 137); line-height: 48px; overflow: hidden; font-family: "Î¢ÈíÑÅºÚ"; font-size: 18px; margin-bottom: 20px; float: left;
+}
+.input_word01 .secelted {
+	padding: 0px 4px; border: 1px solid rgb(201, 202, 202); border-image: none; width: 330px; line-height: 48px; overflow: hidden; background-color: rgb(255, 255, 255);
+}
+.input_word01 .popupbox {
+	border-width: medium 1px 1px; border-style: none solid solid; border-color: currentColor rgb(201, 202, 202) rgb(201, 202, 202); padding: 0px 4px; border-image: none; width: 330px; line-height: 48px; overflow: hidden; margin-top: 1px; background-color: rgb(255, 255, 255);
+}
+.input_word01 .popupbox p {
+	width: 100%; line-height: 48px;
+}
+.input_word01 .alt_down {
+	background-position: 0px 0px; width: 30px; height: 48px; float: right; background-image: url("../images/alt-login.png");
+}
+.input_word01 .alt_up {
+	background-position: 0px 50px; width: 30px; height: 48px; float: right; background-image: url("../images/alt-login.png");
+}
+.input_btns {
+	border: currentColor; border-image: none; width: 340px; height: 50px; text-align: center; color: rgb(255, 255, 255); line-height: 50px; font-family: "Î¢ÈíÑÅºÚ"; font-size: 24px; margin-bottom: 15px; background-color: rgb(0, 159, 222);
+}
+.input_words {
+	padding: 4px; border: 1px solid rgb(201, 202, 202); border-image: none; width: 234px; height: 38px; color: rgb(137, 137, 137); line-height: 38px; overflow: hidden; font-family: "Î¢ÈíÑÅºÚ"; font-size: 18px; margin-bottom: 15px; float: left; background-color: rgb(255, 255, 255);
+}
+.input_words02 {
+	border: 1px solid rgb(201, 202, 202); border-image: none; width: 340px; height: 48px; color: rgb(137, 137, 137); line-height: 48px; text-indent: 4px; overflow: hidden; font-family: "Î¢ÈíÑÅºÚ"; font-size: 18px; margin-bottom: 15px; float: left; background-color: rgb(255, 255, 255);
+}
+.input_yanzhengmas {
+	border: 1px solid rgb(201, 202, 202); border-image: none; width: 180px; height: 48px; color: rgb(137, 137, 137); line-height: 48px; font-family: "Î¢ÈíÑÅºÚ"; font-size: 18px; margin-bottom: 10px; background-color: rgb(255, 255, 255);
+}
+.logonDiv {
+	padding: 30px 25px; width: 340px; height: 380px; overflow: hidden; float: right; background-image: url("../images/white_80.png");
+}
+.login-wrap {
+	background: url("../images/login_bg.png") no-repeat right 0px; padding: 0px 0px 0px 54px;
+}
+.login-hd {
+	
+}
+.login-bd {
+	background: url("../images/login_img.png") no-repeat 10% 0% rgb(0, 159, 222); width: 100%; height: 530px; position: relative;
+}
+.login-box {
+	padding: 70px 0px 0px; height: 340px;
+}
+.login-box h2 {
+	color: rgb(68, 68, 68); font-family: "microsoft yahei"; font-size: 16px;
+}
+.login-box li {
+	margin-top: 18px; position: relative;
+}
+.login-box li .user {
+	background: url("../images/icon.png") 8px 0px; border-radius: 3px; border: 1px solid rgb(148, 149, 150); border-image: none; width: 214px; height: 40px; line-height: 40px; padding-left: 30px;
+}
+.login-box li .password {
+	background: url("../images/icon.png") 8px 0px; border-radius: 3px; border: 1px solid rgb(148, 149, 150); border-image: none; width: 214px; height: 40px; line-height: 40px; padding-left: 30px;
+}
+.login-box li .password {
+	background-position: 8px -42px;
+}
+.login-box li span.inp-val {
+	left: 30px; top: 10px; color: rgb(153, 153, 153); font-size: 14px; position: absolute;
+}
+.footer {
+	margin: 20px 0px 0px; text-align: center; font-family: "microsoft yahei"; font-size: 14px;
+}
+.g-btn {
+	background: url("../images/sprite.png"); height: 30px; line-height: 30px; margin-right: 2px; display: inline-block;
+}
+.g-btn span {
+	background: url("../images/sprite.png"); height: 30px; line-height: 30px; margin-right: 2px; display: inline-block;
+}
+.send-btn {
+	background: url("../images/sprite.png"); height: 30px; line-height: 30px; margin-right: 2px; display: inline-block;
+}
+.account {
+	background: url("../images/sprite.png"); height: 30px; line-height: 30px; margin-right: 2px; display: inline-block;
+}
+.account span {
+	background: url("../images/sprite.png"); height: 30px; line-height: 30px; margin-right: 2px; display: inline-block;
+}
+.g-btn {
+	background-position: 0px -365px; padding-left: 20px;
+}
+.g-btn span {
+	background-position: right -413px; padding: 0px 20px 0px 0px; color: rgb(68, 68, 68); font-family: "microsoft yahei"; font-size: 14px;
+}
+.account span {
+	background-position: right -413px; padding: 0px 20px 0px 0px; color: rgb(68, 68, 68); font-family: "microsoft yahei"; font-size: 14px;
+}
+.send-btn {
+	width: 164px; height: 33px; line-height: 33px; font-size: 14px;
+}
+li.on .send-btn {
+	background-position: 0px -44px;
+}
+li.on .send-btn a {
+	color: rgb(77, 117, 160);
+}
+.account {
+	background-position: 0px -456px; margin: 2px; height: 18px; line-height: 18px; padding-left: 10px; font-size: 12px; float: left;
+}
+.account span {
+	background-position: right -492px; padding: 0px 10px 0px 0px; height: 18px; line-height: 18px; font-size: 12px;
+}
+.account-red {
+	background-position: 0px -528px;
+}
+.account-red span {
+	background-position: right -564px;
+}
+.green-btn {
+	background-position: 0px -596px;
+}
+.green-btn span {
+	background-position: right -632px; color: rgb(255, 255, 255);
+}
+.head {
+	background: url("../images/head.png") center 0px; width: 100%; height: 73px; min-width: 904px;
+}
+.head .logo {
+	margin-top: 6px;
+}
+.head .logo span {
+	margin: 20px 20px 0px;
+}
+.head .head-out {
+	width: 233px; color: rgb(51, 51, 51); font-family: "microsoft yahei"; font-size: 13px; margin-top: 10px;
+}
+.head .head-out a {
+	color: rgb(51, 51, 51);
+}
+.head ul li {
+	float: left;
+}
+.head ul li.head-line {
+	padding: 0px 9px;
+}
+.text p {
+	font-size: 14px;
+}
+.menu {
+	background: rgb(251, 251, 252); width: 192px;
+}
+#navBarDiv {
+	padding: 14px 0px 14px 16px; border-bottom-color: rgb(217, 218, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+#navBarDiv li {
+	margin-top: 7px;
+}
+#navBarDiv li i {
+	margin: 0px 8px;
+}
+#navBarDiv .send-btn {
+	font-weight: bold;
+}
+#navBarDiv li.on i.ico-write {
+	background-position: 0px -117px;
+}
+#navBarDiv li.on i.ico-invited {
+	background-position: 0px -181px;
+}
+#navMid {
+	height: 260px;
+}
+#navMid h3 {
+	height: 31px; line-height: 31px; padding-left: 32px; font-size: 14px;
+}
+#navMid li {
+	height: 31px; line-height: 31px; padding-left: 32px; font-size: 14px;
+}
+#navMid li.on {
+	background: rgb(231, 231, 233);
+}
+#navMid h3 {
+	padding-left: 16px; font-size: 16px; border-bottom-color: rgb(217, 218, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+#navMid h3 i {
+	margin-right: 10px;
+}
+.content {
+	background: url("../images/left_bg.gif") repeat-y; overflow: hidden; min-height: 800px; min-width: 904px;
+}
+.containter {
+	padding: 0px 20px; overflow: hidden; min-height: 800px; min-width: 904px;
+}
+.main {
+	
+}
+.mail-wrap {
+	font-size: 12px;
+}
+.mail-tit {
+	background: rgb(243, 244, 245); height: 36px; line-height: 36px; padding-left: 8px; font-size: 13px; border-top-color: rgb(115, 115, 115); border-top-width: 2px; border-top-style: solid;
+}
+.mail-tit a {
+	color: rgb(155, 156, 156);
+}
+.mail-list li {
+	height: 36px; color: rgb(68, 68, 68); line-height: 36px; padding-left: 8px; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid; position: relative;
+}
+.mail-list li a {
+	color: rgb(68, 68, 68); text-decoration: none;
+}
+.mail-list li .theme-box {
+	width: 335px;
+}
+.mail-list li .desc-box {
+	margin-left: 335px;
+}
+.ico-wrap {
+	width: 90px;
+}
+.mail-left {
+	margin: 10px 12px 0px 0px; float: left;
+}
+.tit-r {
+	border-bottom-color: rgb(115, 115, 115); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.tit-r h3 {
+	padding: 10px 0px; color: rgb(51, 51, 51);
+}
+.ico-sprite {
+	background: url("../images/sprite.png"); margin-bottom: 3px; vertical-align: middle; display: inline-block;
+}
+.arr-down {
+	background-position: -2px -257px; width: 7px; height: 4px;
+}
+.ico-invited {
+	background-position: 0px -147px; width: 20px; height: 16px;
+}
+.ico-write {
+	background-position: 0px -92px; width: 17px; height: 16px;
+}
+.ico-mail {
+	background-position: -59px -146px; width: 14px; height: 14px;
+}
+.ico-user {
+	background-position: -59px -92px; width: 17px; height: 14px;
+}
+.ico-download {
+	background-position: 0px -294px; width: 11px; height: 14px;
+}
+.ico-like {
+	background-position: -69px -293px; width: 14px; height: 14px;
+}
+.on .ico-like {
+	background-position: -93px -293px; width: 14px; height: 14px;
+}
+.on .ico-mail {
+	background-position: -59px -181px;
+}
+.on .ico-user {
+	background-position: -59px -117px;
+}
+.ico-serch {
+	background-position: 0px -220px; width: 16px; height: 28px;
+}
+.arr-edit {
+	background-position: -30px -257px; width: 8px; height: 8px;
+}
+.arr-del {
+	background-position: -30px -272px; width: 8px; height: 8px;
+}
+.ico-file {
+	background-position: -58px -257px; width: 17px; height: 16px;
+}
+.ico-exe {
+	background-image: url("../images/link.png"); background-repeat: no-repeat;
+}
+.ico-doc {
+	background-position: right -40px;
+}
+.ico-card {
+	background-position: -120px -92px; width: 16px; height: 13px;
+}
+.ico-setup {
+	background-position: -120px -116px; width: 16px; height: 15px;
+}
+.ico-delete {
+	background-position: -120px -215px; width: 15px; height: 15px;
+}
+.ico-mail1 {
+	background-position: -120px -147px; width: 17px; height: 15px;
+}
+.ico-edit1 {
+	background-position: -120px -179px; width: 15px; height: 15px;
+}
+.ico-arr-d {
+	background-position: -168px -147px; width: 7px; height: 11px; margin-bottom: 0px;
+}
+.ico-arr-r {
+	background-position: -121px -293px; width: 4px; height: 7px;
+}
+.ico-arr-l {
+	background-position: -133px -293px; width: 4px; height: 7px;
+}
+.ico-add-btn {
+	background-position: -121px -242px; width: 16px; height: 16px;
+}
+.ico-upload {
+	background-position: -166px -179px; width: 17px; height: 16px;
+}
+.ico-share {
+	background-position: -218px -73px; width: 13px; height: 17px;
+}
+.ico-load {
+	background-position: -247px -73px; width: 17px; height: 17px;
+}
+.ico-trash {
+	background-position: -283px -73px; width: 13px; height: 17px;
+}
+.ico-cry-d {
+	background-position: -318px -73px; width: 17px; height: 17px;
+}
+.mail-tit a:hover .ico-share {
+	background-position: -218px -102px; width: 13px; height: 17px;
+}
+.mail-tit a:hover .ico-load {
+	background-position: -247px -102px; width: 17px; height: 17px;
+}
+.mail-tit a:hover .ico-trash {
+	background-position: -283px -102px; width: 13px; height: 17px;
+}
+.mail-tit a:hover .ico-cry-d {
+	background-position: -318px -102px; width: 17px; height: 17px;
+}
+.mail-tit a {
+	display: inline-block;
+}
+.mail-tit a:hover {
+	
+}
+.red {
+	color: rgb(255, 90, 0);
+}
+.blue {
+	color: rgb(0, 51, 153);
+}
+.dark {
+	color: rgb(68, 68, 68);
+}
+.gray {
+	color: rgb(174, 174, 175);
+}
+.green {
+	color: rgb(78, 146, 65);
+}
+.undel-line {
+	text-decoration: underline;
+}
+.mail-list li .desc-box a {
+	color: rgb(137, 137, 137);
+}
+.mail-list li.on a {
+	color: rgb(68, 68, 68); font-weight: bold;
+}
+.time-box .time {
+	width: 80px; text-align: left; display: inline-block;
+}
+.top-bar {
+	border-bottom-color: rgb(115, 115, 115); border-bottom-width: 2px; border-bottom-style: solid;
+}
+.tool-bar {
+	height: 30px; margin-bottom: 10px;
+}
+.tool-bar ul li {
+	float: left; position: relative; z-index: 100;
+}
+.tool-bar ul li i {
+	margin-top: 3px; margin-left: 10px;
+}
+.tool-bar .num {
+	color: rgb(68, 68, 68); font-size: 14px; margin-top: 3px;
+}
+.page {
+	background: url("../images/btn-page.png") no-repeat; width: 71px; height: 30px; display: inline-block;
+}
+.page a {
+	width: 35px; height: 30px; display: inline-block;
+}
+.set-btn {
+	background: url("../images/btn-set.png") no-repeat; width: 71px; height: 30px; color: rgb(68, 68, 68); line-height: 30px; font-family: "microsoft yahei"; display: inline-block;
+}
+.ser-btn {
+	background: url("../images/btn-set.png") no-repeat; width: 71px; height: 30px; color: rgb(68, 68, 68); line-height: 30px; font-family: "microsoft yahei"; display: inline-block;
+}
+.ser-btn-h {
+	background: url("../images/btn-set.png") no-repeat; width: 71px; height: 30px; color: rgb(68, 68, 68); line-height: 30px; font-family: "microsoft yahei"; display: inline-block;
+}
+.set-btn i {
+	margin: 12px 0px 0px 44px;
+}
+.ser-btn {
+	background: url("../images/ser_btn.png") no-repeat; text-align: center;
+}
+.ser-btn-h {
+	background: url("../images/ser_btn_h.png") no-repeat; width: 110px; text-align: center;
+}
+.ser_inp {
+	border: 1px solid rgb(187, 187, 187); border-image: none; width: 170px; height: 27px; line-height: 27px; padding-left: 5px;
+}
+.ser-box {
+	width: 170px; padding-left: 5px; float: left; position: relative;
+}
+.serch-icon {
+	top: 3px; right: 10px; position: absolute;
+}
+.mail-write {
+	height: 100%; border-top-color: rgb(115, 115, 115); border-top-width: 2px; border-top-style: solid;
+}
+.mail-read {
+	height: 100%; border-top-color: rgb(115, 115, 115); border-top-width: 2px; border-top-style: solid;
+}
+.write-head {
+	margin-bottom: 10px;
+}
+.write-head dl {
+	margin-top: 10px;
+}
+.write-head dt {
+	width: 60px; float: left;
+}
+.write-head dd {
+	margin-left: 77px;
+}
+.write-inp {
+	background: url("../images/inp_bg.gif") repeat-x; border-radius: 3px; border: 1px solid rgb(187, 187, 187); border-image: none; width: 95%; height: 27px; line-height: 27px;
+}
+.write-inp2 {
+	background: url("../images/inp_bg.gif") repeat-x; padding: 0px; border-radius: 3px; border: 1px solid rgb(187, 187, 187); border-image: none; width: 95%; min-height: 18px;
+}
+.write-inp-fix {
+	margin: 0px; border: currentColor; border-image: none; width: 10px; height: 18px; line-height: 18px; display: inline-block; position: relative; z-index: 20; background-color: transparent;
+}
+.write-inp-fix::-ms-clear {
+	display: none;
+}
+.send-user-box {
+	clear: right; position: relative;
+}
+.send-user-box .head-send {
+	left: 5px; top: 5px; position: absolute;
+}
+.account-edit {
+	padding-left: 3px; margin-left: 10px; border-left-color: rgb(187, 187, 187); border-left-width: 1px; border-left-style: solid;
+}
+.account-del {
+	padding-left: 3px; margin-left: 10px; border-left-color: rgb(187, 187, 187); border-left-width: 1px; border-left-style: solid;
+}
+.account-del {
+	border-left-color: rgb(237, 184, 184); border-left-width: 1px; border-left-style: solid;
+}
+.theme-input .write-inp {
+	width: 95%; color: rgb(68, 68, 68); font-size: 15px; font-weight: bold;
+}
+.download-file p {
+	margin-bottom: 6px;
+}
+.process {
+	border: 1px solid rgb(75, 128, 14); border-image: none; width: 50px; height: 7px; overflow: hidden; display: inline-block;
+}
+.process em {
+	background: url("../images/pro_bg.gif") repeat-x; height: 7px; line-height: 0; font-size: 0px; display: inline-block;
+}
+.file-wrap {
+	overflow: hidden;
+}
+.file-box {
+	background: rgb(237, 237, 237); padding: 5px; width: 260px; height: 45px; margin-right: 5px; margin-bottom: 10px; float: left; position: relative;
+}
+.file-box .del {
+	top: 5px; right: 10px; position: absolute;
+}
+.file-box i {
+	width: 20px; height: 32px; margin-top: 3px;
+}
+.file-box .file-r {
+	width: 240px; clear: right; float: left;
+}
+.file-box-content {
+	width: 240px; overflow: hidden;
+}
+.file-box-filename {
+	height: 25px; line-height: 25px; overflow: hidden;
+}
+.mail-read .title {
+	padding: 10px 17px;
+}
+.mail-read .title h2 {
+	color: rgb(68, 68, 68); padding-bottom: 5px; font-size: 16px; font-weight: bolder;
+}
+.mail-read .title ul li {
+	padding: 0px;
+}
+.mail-read .title {
+	color: rgb(114, 125, 149);
+}
+.mail-read .title a {
+	color: rgb(114, 125, 149);
+}
+.text {
+	padding: 10px 17px; color: black; line-height: 24px;
+}
+.annex {
+	margin-bottom: 40px;
+}
+.annex h3 {
+	background: rgb(242, 242, 242); height: 32px; color: rgb(0, 0, 0); line-height: 32px; padding-left: 17px; font-size: 14px;
+}
+.annex .title {
+	padding: 10px; color: rgb(0, 0, 0);
+}
+.annex .download {
+	background: url("../images/sprite.png") no-repeat 0px -690px; padding-left: 37px; margin-left: 10px;
+}
+.annex .download a {
+	color: rgb(0, 0, 0);
+}
+.annex .download .operate a {
+	color: rgb(44, 74, 119); margin-right: 9px;
+}
+.address {
+	background: rgb(251, 251, 252); width: 190px;
+}
+.address .addr-hd a {
+	background: rgb(242, 242, 242); width: 95px; height: 34px; text-align: center; line-height: 34px; border-bottom-color: rgb(200, 207, 218); border-bottom-width: 1px; border-bottom-style: solid; display: inline-block;
+}
+.address .addr-hd a.on {
+	background: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.address .addr-search {
+	border-width: 1px; border-style: solid; border-color: rgb(154, 154, 154) rgb(195, 195, 195) rgb(195, 195, 195) rgb(154, 154, 154); margin: 10px auto; width: 170px; height: 18px; line-height: 18px;
+}
+.address .addr-search input {
+	background: none; border: currentColor; border-image: none; width: 150px; height: 18px; line-height: 18px;
+}
+.addr-list {
+	width: 168px; margin-left: 10px;
+}
+.addr-list li {
+	margin: 2px 0px; height: 30px; line-height: 30px; overflow: hidden; padding-left: 10px; cursor: pointer;
+}
+.addr-list li.on {
+	background: rgb(232, 233, 235);
+}
+.addr-list li:hover {
+	background: rgb(245, 245, 245);
+}
+.addr-list li a {
+	float: left;
+}
+.address-main table {
+	width: 100%;
+}
+.address-main th {
+	height: 36px; text-align: left; line-height: 36px; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.address-main td {
+	height: 36px; text-align: left; line-height: 36px; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.address-main th {
+	background: rgb(243, 244, 245); padding: 0px; border-top-color: rgb(115, 115, 115); border-top-width: 2px; border-top-style: solid;
+}
+.address-main th span {
+	padding: 0px 10px;
+}
+.address-main td {
+	padding: 0px 10px; color: rgb(68, 68, 68);
+}
+.address-main tr.on td {
+	background: rgb(240, 248, 253);
+}
+.address-main td .mail-box {
+	position: relative;
+}
+.addr-oper {
+	display: none;
+}
+.address-main tr.on .addr-oper {
+	display: block;
+}
+.hide {
+	display: none;
+}
+.set-layer {
+	background: rgb(255, 255, 255); border: 1px solid rgb(153, 153, 153); border-image: none; top: 30px; width: 127px; text-align: center; position: absolute; z-index: 1000;
+}
+.all-selected {
+	background: rgb(255, 255, 255); border: 1px solid rgb(153, 153, 153); border-image: none; top: 30px; width: 127px; text-align: center; position: absolute; z-index: 1000;
+}
+.all-selected {
+	width: 114px;
+}
+.all-selected p a {
+	height: 25px; line-height: 25px; text-decoration: none; display: block;
+}
+.all-selected p.on a {
+	background: rgb(51, 102, 204); color: rgb(255, 255, 255);
+}
+.all-selected a:hover {
+	background: rgb(51, 102, 204); color: rgb(255, 255, 255);
+}
+.select-box {
+	border-bottom-color: rgb(233, 233, 233); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.set-wrap {
+	position: relative;
+}
+.set-layer {
+	right: 0px;
+}
+.mail-box {
+	color: rgb(68, 68, 68); font-family: "microsoft yahei"; font-size: 14px;
+}
+.mail-box a {
+	color: rgb(68, 68, 68);
+}
+.mail-box .hd {
+	padding: 0px 14px; height: 30px; line-height: 30px; overflow: hidden;
+}
+.user-list li {
+	padding: 0px 14px; height: 30px; line-height: 30px; overflow: hidden;
+}
+.group dt {
+	padding: 0px 14px; height: 30px; line-height: 30px; overflow: hidden;
+}
+.group dt {
+	background: url("../images/pop_bg.gif") repeat-x;
+}
+.user-list li i {
+	margin-right: 15px;
+}
+.group .add-ico {
+	margin-right: 15px;
+}
+.group .sub-ico {
+	margin-right: 15px;
+}
+.group .add-ico {
+	background: url("../images/sprite.png") 0px -271px; width: 9px; height: 10px; text-indent: -999px; display: inline-block;
+}
+.group .sub-ico {
+	background: url("../images/sprite.png") -15px -271px;
+}
+.group .sub-ico2 {
+	background: url("../images/sprite.png") -15px -271px; width: 9px; height: 10px; text-indent: -999px; display: inline-block;
+}
+.mail-box .hd {
+	background: rgb(249, 249, 249);
+}
+.mail-box .showmore {
+	padding: 10px 0px; font-weight: bold; margin-left: 46px; display: block;
+}
+.showhide {
+	right: -1000px; position: absolute;
+}
+.popup {
+	background: rgb(255, 255, 255); border-radius: 3px; border: 1px solid rgb(153, 153, 153); border-image: none; position: absolute; z-index: 100001;
+}
+.popup .popup-btm {
+	padding: 9px 7px; height: 30px; border-top-color: rgb(219, 219, 219); border-top-width: 1px; border-top-style: solid;
+}
+.popup-info .popup-btm {
+	background: rgb(245, 245, 245);
+}
+.popup .hd {
+	background: url("../images/pop_bg.gif") repeat-x; height: 34px; text-align: center; line-height: 34px; font-size: 14px; border-bottom-color: rgb(194, 194, 194); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.popup .bd {
+	padding: 20px;
+}
+.popup-info {
+	left: 60px; top: -80px; width: 392px;
+}
+.popup-info .popup-arr {
+	background: url("../images/arrow2.png"); left: -14px; top: 90px; width: 14px; height: 22px; display: inline-block; position: absolute;
+}
+.popup-info ul li {
+	line-height: 24px;
+}
+.popup-info ul li.tit {
+	width: 392px; color: rgb(0, 0, 0); font-size: 18px; font-weight: bold; margin-bottom: 10px;
+}
+.popup-new {
+	left: 50%; top: 50%; width: 392px; margin-top: -221px; margin-left: -197px;
+}
+.popup-edit {
+	left: 50%; top: 50%; width: 392px; margin-top: -221px; margin-left: -197px;
+}
+.popup-del {
+	left: 50%; top: 50%; width: 392px; margin-top: -221px; margin-left: -197px;
+}
+.popup-mange {
+	left: 50%; top: 50%; width: 392px; margin-top: -221px; margin-left: -197px;
+}
+.popup-del {
+	margin-top: -80px;
+}
+.popup-del .del-con {
+	background: url("../images/sendlose.png") no-repeat left; height: 60px; padding-left: 70px;
+}
+.popup-new {
+	width: 550px; margin-left: -256px;
+}
+.popup-new ul li {
+	padding-bottom: 10px; float: left;
+}
+.popup-new ul li span {
+	width: 70px; text-align: right; margin-right: 16px; float: left;
+}
+.popup-new ul li input {
+	border-radius: 3px; border: 1px solid rgb(187, 187, 187); border-image: none; width: 120px; height: 22px; line-height: 22px;
+}
+.popup-new ul li textarea {
+	border-radius: 3px; border: 1px solid rgb(187, 187, 187); border-image: none; width: 120px; height: 53px;
+}
+.popup-new ul li select {
+	border-radius: 3px; border: 1px solid rgb(187, 187, 187); border-image: none; width: 122px; height: 28px;
+}
+.popup-new ul li select option {
+	height: 28px;
+}
+.popup-edit ul li {
+	padding-bottom: 10px;
+}
+.popup-edit ul li span {
+	width: 70px; text-align: right; margin-right: 16px; float: left;
+}
+.popup-edit ul li input {
+	border-radius: 3px; border: 1px solid rgb(187, 187, 187); border-image: none; width: 220px; height: 26px; line-height: 26px;
+}
+.popup-edit ul li textarea {
+	border-radius: 3px; border: 1px solid rgb(187, 187, 187); border-image: none; width: 220px; height: 53px;
+}
+.popup-edit ul li select {
+	border-radius: 3px; border: 1px solid rgb(187, 187, 187); border-image: none; width: 222px; height: 28px;
+}
+.popup-mange {
+	width: 510px; margin-left: -260px;
+}
+.adrr-left {
+	border: 1px solid rgb(187, 187, 187); border-image: none; width: 220px; height: 300px;
+}
+.adrr-left .tit {
+	padding: 5px 10px; font-weight: bold; border-bottom-color: rgb(187, 187, 187); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.addr-has .del {
+	display: none;
+}
+.addr-has li:hover .del {
+	display: block;
+}
+.popup-mange .arr {
+	margin: 130px 0px 0px 8px;
+}
+.write-wrap {
+	margin-right: 200px; float: none;
+}
+.write-wrap-toggle {
+	width: 99%; margin-right: 0px; float: left;
+}
+.showMail {
+	width: 7px; height: 100%; text-align: center; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;
+}
+.showMail i {
+	background-position: center; border-width: 1px 0px 1px 1px; border-style: solid none solid solid; border-color: rgb(221, 221, 221) currentColor rgb(221, 221, 221) rgb(221, 221, 221); border-image: none; height: 40px; margin-top: 150px; background-image: url("../images/jt_2.png"); background-repeat: no-repeat;
+}
+.maillist {
+	width: 190px; border-left-color: rgb(221, 221, 221); border-left-width: 0px; border-left-style: solid; float: right;
+}
+.maillist-toggle {
+	
+}
+.maillist .mail-box {
+	width: 190px; float: left;
+}
+.mr200 {
+	margin-right: 200px;
+}
+.foot-mail {
+	padding: 0px 10px; height: 30px; color: rgb(119, 119, 119); line-height: 30px; margin-top: 10px; background-color: rgb(255, 255, 255);
+}
+.foot-mail ul li {
+	padding: 0px 20px; float: left;
+}
+.foot-mail ul li a {
+	color: rgb(119, 119, 119);
+}
+.foot-mail ul li .g-btn span {
+	color: rgb(119, 119, 119);
+}
+.list-show {
+	background-position: -218px 0px; width: 63px; height: 29px;
+}
+.list-block {
+	background-position: -219px -36px;
+}
+.list-show a {
+	width: 30px; height: 29px; display: inline-block;
+}
+.file-issue {
+	background: url("../images/table_bg.png"); min-height: 600px;
+}
+.file-table {
+	width: 100%; line-height: 29px;
+}
+.file-table .on td {
+	background: rgb(255, 255, 202);
+}
+.file-table td {
+	height: 36px; line-height: 36px;
+}
+.file-table td.con {
+	width: 75%; padding-left: 10px;
+}
+.file-table .theme-info {
+	color: rgb(102, 102, 102); font-weight: bold;
+}
+.file-table td.size {
+	width: 10%;
+}
+.file-table td.time {
+	width: 15%; text-align: right;
+}
+.file-ico {
+	background: url("../images/file-type.png"); width: 60px; height: 60px; margin-top: 20px; display: inline-block;
+}
+.file-ico-small {
+	background: url("../images/file-type.png"); width: 60px; height: 60px; margin-top: 20px; display: inline-block;
+}
+.file-ico-small {
+	width: 16px; height: 16px; margin-top: 0px;
+}
+.file-zip {
+	background-position: 0px -78px;
+}
+.file-txt {
+	background-position: 0px -160px;
+}
+.file-doc {
+	background-position: 0px -243px;
+}
+.file-psd {
+	background-position: 0px -320px;
+}
+.file-folder.file-ico-small {
+	background-position: -80px 0px;
+}
+.file-zip.file-ico-small {
+	background-position: -80px -34px;
+}
+.file-txt.file-ico-small {
+	background-position: -80px -74px;
+}
+.file-doc.file-ico-small {
+	background-position: -80px -109px;
+}
+.file-psd.file-ico-small {
+	background-position: -80px -146px;
+}
+.file-block li {
+	width: 100px; text-align: center; font-size: 12px; margin-top: 10px; margin-right: 28px; float: left;
+}
+.file-block li .file-type {
+	width: 96px; height: 96px;
+}
+.file-block li.on .file-type {
+	background: url("../images/file-check.png") no-repeat; border: 2px solid rgb(46, 128, 220); border-image: none; width: 92px; height: 92px;
+}
+.reply-wrap {
+	color: rgb(102, 102, 102); padding-top: 20px; font-size: 12px;
+}
+.reply-left {
+	width: 150px; text-align: right;
+}
+.reply-box {
+	margin-left: 0px;
+}
+.reply-box ul li {
+	line-height: 2; margin-bottom: 10px;
+}
+.auto-text {
+	color: rgb(102, 102, 102); font-family: arial,helvetica,clean,sans-serif;
+}
+.auto-text input {
+	color: rgb(102, 102, 102); font-family: arial,helvetica,clean,sans-serif;
+}
+.auto-text textarea {
+	color: rgb(102, 102, 102); font-family: arial,helvetica,clean,sans-serif;
+}
+.auto-text input {
+	padding: 0px 5px; height: 26px; line-height: 26px;
+}
+.auto-text textarea {
+	padding: 5px; width: 450px;
+}
+.auto-time {
+	display: inline-block; position: relative;
+}
+.auto-time i.ico-date {
+	background-position: -167px -214px; top: 8px; width: 12px; height: 11px; right: 8px; position: absolute; cursor: pointer;
+}
+.reply-list .on {
+	background: rgb(255, 255, 202);
+}
+.reply-list .operate {
+	display: none;
+}
+.reply-list .on .operate {
+	display: block;
+}
+.reply-list .on .operate {
+	color: rgb(0, 51, 153);
+}
+.reply-list .on .operate a {
+	color: rgb(0, 51, 153);
+}
+.change-psd {
+	margin-bottom: 40px;
+}
+.change-psd li {
+	margin-bottom: 10px;
+}
+.change-psd li span {
+	width: 100px; text-align: right; color: rgb(68, 68, 68); margin-right: 10px; display: inline-block;
+}
+.user-set li span.list-tit {
+	width: 100px; text-align: right; color: rgb(68, 68, 68); margin-right: 10px; display: inline-block;
+}
+.change-psd li input {
+	height: 22px; line-height: 22px; padding-left: 5px;
+}
+.user-set li {
+	padding: 10px 0px;
+}
+.user-right {
+	margin-left: 70px;
+}
+.user-set .inp {
+	height: 22px; line-height: 22px;
+}
+.user-img {
+	border: 1px solid rgb(184, 184, 184); border-image: none;
+}
+.mall-group {
+	width: 100%;
+}
+.mall-group th {
+	padding: 0px 5px; height: 36px; text-align: left; color: rgb(68, 68, 68); line-height: 36px; border-bottom-color: rgb(184, 184, 184); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.mall-group td {
+	padding: 0px 5px; height: 36px; text-align: left; color: rgb(68, 68, 68); line-height: 36px; border-bottom-color: rgb(184, 184, 184); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.mall-group th {
+	background: rgb(243, 244, 245);
+}
+.mall-group th span {
+	padding: 0px 10px;
+}
+.group-inp {
+	width: 228px; height: 22px; line-height: 22px;
+}
+.schedule-btn {
+	padding: 15px 0px; text-align: center;
+}
+.color-moudel {
+	background: rgb(231, 231, 233); height: 30px; text-align: center; color: rgb(51, 51, 51); line-height: 30px; margin-top: 20px; position: relative;
+}
+.color-moudel .operate {
+	background: url("../images/sprite.png") -120px -327px; top: 10px; width: 14px; height: 5px; right: 10px; display: inline-block; position: absolute;
+}
+.color-pop {
+	background: rgb(255, 255, 255); padding: 10px 0px; border: 1px solid rgb(221, 221, 221); border-image: none; top: 30px; width: 154px; right: 0px; position: absolute; box-shadow: 3px 3px 3px #888888;
+}
+.color-pop a {
+	background: rgb(81, 125, 168); margin: 6px 0px 0px 9px; width: 20px; height: 15px; float: left;
+}
+.color-pop a.color_1 {
+	background: rgb(81, 125, 168);
+}
+.color-pop a.color_2 {
+	background: rgb(125, 168, 212);
+}
+.color-pop a.color_3 {
+	background: rgb(168, 168, 212);
+}
+.color-pop a.color_4 {
+	background: rgb(75, 113, 172);
+}
+.color-pop a.color_5 {
+	background: rgb(168, 81, 125);
+}
+.color-pop a.color_6 {
+	background: rgb(255, 212, 81);
+}
+.color-pop a.color_7 {
+	background: rgb(255, 212, 168);
+}
+.color-pop a.color_8 {
+	background: rgb(255, 168, 125);
+}
+.color-pop a.color_9 {
+	background: rgb(168, 125, 81);
+}
+.color-pop a.color_10 {
+	background: rgb(212, 168, 212);
+}
+.color-pop a.color_11 {
+	background: rgb(255, 125, 81);
+}
+.color-pop a.color_12 {
+	background: rgb(212, 168, 125);
+}
+.color-pop a.color_13 {
+	background: rgb(255, 168, 168);
+}
+.color-pop a.color_14 {
+	background: rgb(212, 125, 125);
+}
+.color-pop a.color_15 {
+	background: rgb(64, 166, 149);
+}
+.color-pop a.color_16 {
+	background: rgb(81, 168, 168);
+}
+.color-pop a.color_17 {
+	background: rgb(125, 212, 212);
+}
+.color-pop a.color_18 {
+	background: rgb(125, 212, 125);
+}
+.color-pop a.color_19 {
+	background: rgb(81, 168, 81);
+}
+.color-pop a.color_20 {
+	background: rgb(81, 125, 125);
+}
+.green-style .head {
+	background: url("../images/head_grass_green.png");
+}
+.green-style .all-selected p.on a {
+	background: rgb(119, 162, 93); color: rgb(255, 255, 255);
+}
+.green-style .all-selected a:hover {
+	background: rgb(119, 162, 93); color: rgb(255, 255, 255);
+}
+.green-style li.on .send-btn {
+	background: url("../images/btn_style.png") 0px -174px; color: rgb(119, 162, 93);
+}
+.green-style #navBarDiv li.on i.ico-invited {
+	background: url("../images/btn_style.png") right -183px;
+}
+.blue-green-style .head {
+	background: url("../images/head_blue_green.png");
+}
+.blue-green-style .all-selected p.on a {
+	background: rgb(90, 165, 165); color: rgb(255, 255, 255);
+}
+.blue-green-style .all-selected a:hover {
+	background: rgb(90, 165, 165); color: rgb(255, 255, 255);
+}
+.blue-green-style li.on .send-btn {
+	background: url("../images/btn_style.png") 0px -87px; color: rgb(90, 165, 165);
+}
+.blue-green-style #navBarDiv li.on i.ico-invited {
+	background: url("../images/btn_style.png") right -96px;
+}
+.gray-blue-style .head {
+	background: url("../images/head_gray_blue.png");
+}
+.gray-blue-style .all-selected p.on a {
+	background: rgb(89, 131, 165); color: rgb(255, 255, 255);
+}
+.gray-blue-style .all-selected a:hover {
+	background: rgb(89, 131, 165); color: rgb(255, 255, 255);
+}
+.gray-blue-style li.on .send-btn {
+	background: url("../images/btn_style.png") 0px 0px; color: rgb(89, 131, 165);
+}
+.gray-blue-style #navBarDiv li.on i.ico-invited {
+	background: url("../images/btn_style.png") right -9px;
+}
+.yellow-style .head {
+	background: url("../images/head_yellow.png");
+}
+.yellow-style .all-selected p.on a {
+	background: rgb(204, 153, 51); color: rgb(255, 255, 255);
+}
+.yellow-style .all-selected a:hover {
+	background: rgb(204, 153, 51); color: rgb(255, 255, 255);
+}
+.yellow-style li.on .send-btn {
+	background: url("../images/btn_style.png") 0px -261px; color: rgb(204, 153, 51);
+}
+.yellow-style #navBarDiv li.on i.ico-invited {
+	background: url("../images/btn_style.png") right -270px;
+}
+.red-style .head {
+	background: url("../images/head_red.png");
+}
+.red-style .all-selected p.on a {
+	background: rgb(204, 81, 51); color: rgb(255, 255, 255);
+}
+.red-style .all-selected a:hover {
+	background: rgb(204, 81, 51); color: rgb(255, 255, 255);
+}
+.red-style li.on .send-btn {
+	background: url("../images/btn_style.png") 0px -348px; color: rgb(204, 81, 51);
+}
+.red-style #navBarDiv li.on i.ico-invited {
+	background: url("../images/btn_style.png") right -357px;
+}
+.footer_span {
+	padding-left: 205px; font-size: 16px; font-weight: bold; float: left;
+}
+.footer_img {
+	padding-right: 205px; float: right;
+}
+.footer_img1 {
+	padding-left: 205px; float: left;
+}
+.MoreTime {
+	padding-right: 30px; margin-left: 50px;
+}
+#EndTimedl {
+	display: none;
+}
+#scrollWrap {
+	width: 450px; height: 18px; overflow: hidden; margin-top: 20px; margin-left: 200px; float: right;
+}
+#scrollMsg li {
+	padding: 0px 10px; height: 18px; line-height: 18px; overflow: hidden; font-size: 12px;
+}
+.toolshadow {
+	background: url("../images/shadowbg.png") repeat-x bottom;
+}
+.writetab {
+	margin-top: 8px;
+}
+.writetab td {
+	padding: 3px 0px; font-size: 13px;
+}
