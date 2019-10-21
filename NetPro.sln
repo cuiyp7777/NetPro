@@ -34,6 +34,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01设计模式", "01设计�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern", "DesignPattern\DesignPattern.csproj", "{09E96B0E-481A-4BE1-9C5E-22F44A24E05D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinBasicNet", "WinBasicNet\WinBasicNet.csproj", "{2FDE3F38-7E76-4FD7-8B98-D4BAD55178A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,10 @@ Global
 		{09E96B0E-481A-4BE1-9C5E-22F44A24E05D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09E96B0E-481A-4BE1-9C5E-22F44A24E05D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09E96B0E-481A-4BE1-9C5E-22F44A24E05D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FDE3F38-7E76-4FD7-8B98-D4BAD55178A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FDE3F38-7E76-4FD7-8B98-D4BAD55178A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FDE3F38-7E76-4FD7-8B98-D4BAD55178A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FDE3F38-7E76-4FD7-8B98-D4BAD55178A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +89,7 @@ Global
 		{9CF12240-8583-4808-BFE8-737BD52B1143} = {D8A61DBE-7710-41F6-AB20-7AB459C69084}
 		{D6E65E8C-8488-4B67-A2F0-A83F16DEFB33} = {DA571E47-0FD5-499D-BD1F-60C10EBEA29D}
 		{09E96B0E-481A-4BE1-9C5E-22F44A24E05D} = {D6E65E8C-8488-4B67-A2F0-A83F16DEFB33}
+		{2FDE3F38-7E76-4FD7-8B98-D4BAD55178A9} = {D8A61DBE-7710-41F6-AB20-7AB459C69084}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C7E947F8-67C3-4445-BF3F-4B36C7FBA94C}

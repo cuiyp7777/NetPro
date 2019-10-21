@@ -1,0 +1,7 @@
+﻿原型模式（Prototype）用原型实例指定创建对象的种类，并且通过复制这些原型创建新的对象；
+
+#意义
+Prototype：原型类，声明一个clone自身的接口；
+ConcretePrototype：具体的原型类
+Prototype通常提供一个包含Clone方法的接口，
+具体的原型ConcretePrototype使用Clone方法完成对象的创建

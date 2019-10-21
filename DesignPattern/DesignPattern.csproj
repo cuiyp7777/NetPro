@@ -43,11 +43,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="01SimpleFactory\01Operation\ConcreteProduct_Divide.cs" />
+    <Compile Include="01SimpleFactory\01Operation\ConcreteProduct_Minus.cs" />
+    <Compile Include="01SimpleFactory\01Operation\ConcreteProduct_Multiply.cs" />
+    <Compile Include="01SimpleFactory\01Operation\ConcreteProduct_Plus.cs" />
+    <Compile Include="01SimpleFactory\01Operation\Factory_OperationFactory.cs" />
+    <Compile Include="01SimpleFactory\01Operation\Product_Operation.cs" />
+    <Compile Include="01SimpleFactory\02IPayment\ABCPayment.cs" />
+    <Compile Include="01SimpleFactory\02IPayment\ICBCPayment.cs" />
+    <Compile Include="01SimpleFactory\02IPayment\IPayment.cs" />
+    <Compile Include="01SimpleFactory\02IPayment\PaymentFactory.cs" />
+    <Compile Include="02AbstractFactory\01Kfcfood\Factory_Abstract_IKFCFactory.cs" />
+    <Compile Include="02AbstractFactory\01Kfcfood\Factory_CheapPackage.cs" />
+    <Compile Include="02AbstractFactory\01Kfcfood\Factory_LuxuryPackage.cs" />
+    <Compile Include="02AbstractFactory\01Kfcfood\KFCDrink.cs" />
+    <Compile Include="02AbstractFactory\01Kfcfood\KFCDrink_Product_Coffee.cs" />
+    <Compile Include="02AbstractFactory\01Kfcfood\KFCDrink_Product_Coke.cs" />
+    <Compile Include="02AbstractFactory\01Kfcfood\KFCFood.cs" />
+    <Compile Include="02AbstractFactory\01Kfcfood\KFCFood_Product_Chicken.cs" />
+    <Compile Include="02AbstractFactory\01Kfcfood\KFCFood_Product_Wings.cs" />
+    <Compile Include="03Builder\01Product_Vehicle.cs" />
+    <Compile Include="03Builder\02Builder_VehicleBuilder.cs" />
+    <Compile Include="03Builder\03ConcreteBuilder_CarBuilder.cs" />
+    <Compile Include="03Builder\03ConcreteBuilder_MotorCycleBuilder.cs" />
+    <Compile Include="03Builder\03ConcreteBuilder_ScooterBuilder.cs" />
+    <Compile Include="03Builder\04Director_Shop.cs" />
+    <Compile Include="04FactoryMethod\01Factory_IKFC.cs" />
+    <Compile Include="04FactoryMethod\01Factory_IKFC_ChickenFactory.cs" />
+    <Compile Include="04FactoryMethod\01Factory_IKFC_WingsFactory.cs" />
+    <Compile Include="04FactoryMethod\02KFCFood.cs" />
+    <Compile Include="04FactoryMethod\02KFCFood_Chicken.cs" />
+    <Compile Include="04FactoryMethod\02KFCFood_Wings.cs" />
+    <Compile Include="05Prototype\01ColorPrototype.cs" />
+    <Compile Include="05Prototype\02Color.cs" />
+    <Compile Include="05Prototype\03ColorManager.cs" />
+    <Compile Include="06Singleton\Singleton01.cs" />
+    <Compile Include="06Singleton\Singleton02.cs" />
+    <Compile Include="07Adapter\01ITarget.cs" />
+    <Compile Include="07Adapter\02Power.cs" />
+    <Compile Include="07Adapter\Adapter.cs" />
+    <Compile Include="07Adapter\Client.cs" />
+    <Compile Include="8Observer\01Observer.cs" />
+    <Compile Include="8Observer\02Subject.cs" />
+    <Compile Include="8Observer\ConcreteObserver.cs" />
+    <Compile Include="8Observer\ConcreteSubject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="01SimpleFactory\_readme.txt" />
+    <Content Include="02AbstractFactory\_readme.txt" />
+    <Content Include="03Builder\_readme.txt" />
+    <Content Include="04FactoryMethod\_readme.txt" />
+    <Content Include="05Prototype\_readme.txt" />
+    <Content Include="06Singleton\_readme.txt" />
+    <Content Include="07Adapter\_readme.txt" />
+    <Content Include="8Observer\_readme.txt" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
