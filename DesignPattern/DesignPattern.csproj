@@ -115,6 +115,10 @@
     <Compile Include="14ChainofResponsibility\ConcreteHandler1.cs" />
     <Compile Include="14ChainofResponsibility\ConcreteHandler2.cs" />
     <Compile Include="14ChainofResponsibility\ConcreteHandler3.cs" />
+    <Compile Include="15Command\00Receiver.cs" />
+    <Compile Include="15Command\01Command.cs" />
+    <Compile Include="15Command\01CommandConcrete.cs" />
+    <Compile Include="15Command\Invoker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -136,6 +140,7 @@
     <Content Include="12Flyweight\_readme.txt" />
     <Content Include="13Propxy\_readme.txt" />
     <Content Include="14ChainofResponsibility\_readme.txt" />
+    <Content Include="15Command\_readme.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

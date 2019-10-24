@@ -12,6 +12,7 @@ using DesignPattern._11Facade;
 using DesignPattern._12Flyweight;
 using DesignPattern._13Propxy;
 using DesignPattern._14ChainofResponsibility;
+using DesignPattern._15Command;
 using DesignPattern._8Observer;
 using System;
 
@@ -213,6 +214,16 @@ namespace DesignPattern
                 //而Client不要关心到底是谁处理了请求。
                 h1.HandleRequest(request);
             }
+            #endregion
+
+            #region 命令模式
+            Console.WriteLine("===========命令模式============");
+            _00Receiver receiver = new _00Receiver();
+            //调用invoker调用Receiver的操作，实现Execute方法
+            _01Command command = new _01CommandConcrete(receiver);
+            //命令的接收者，将命令请求传递给相应的命令对象
+            Invoker _invoker = new Invoker(command);
+            _invoker.ExcuteCommand();
             #endregion
             Console.Read();
         }
