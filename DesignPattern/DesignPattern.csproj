@@ -83,10 +83,38 @@
     <Compile Include="07Adapter\02Power.cs" />
     <Compile Include="07Adapter\Adapter.cs" />
     <Compile Include="07Adapter\Client.cs" />
-    <Compile Include="8Observer\01Observer.cs" />
-    <Compile Include="8Observer\02Subject.cs" />
-    <Compile Include="8Observer\ConcreteObserver.cs" />
-    <Compile Include="8Observer\ConcreteSubject.cs" />
+    <Compile Include="08Observer\01Observer.cs" />
+    <Compile Include="08Observer\02Subject.cs" />
+    <Compile Include="08Observer\ConcreteObserver.cs" />
+    <Compile Include="08Observer\ConcreteSubject.cs" />
+    <Compile Include="09Bridge\01MakeCoffee_BlackCoffee.cs" />
+    <Compile Include="09Bridge\01MakeCoffee.cs" />
+    <Compile Include="09Bridge\01MakeCoffeeSingleton.cs" />
+    <Compile Include="09Bridge\02Coffee.cs" />
+    <Compile Include="09Bridge\01MakeCoffee_WhiteCoffee.cs" />
+    <Compile Include="09Bridge\02Coffee_LargeCupCoffee.cs" />
+    <Compile Include="09Bridge\02Coffee_MediumCupCoffee.cs" />
+    <Compile Include="10Composite\01Shape.cs" />
+    <Compile Include="10Composite\01Sharp_Circle.cs" />
+    <Compile Include="10Composite\01Sharp_Rectangle.cs" />
+    <Compile Include="10Composite\01Sharp_Triangle.cs" />
+    <Compile Include="10Composite\Graphics.cs" />
+    <Compile Include="11Facade\01SubSystem.cs" />
+    <Compile Include="11Facade\02SubSystem.cs" />
+    <Compile Include="11Facade\03SubSystem.cs" />
+    <Compile Include="11Facade\04SubSystem.cs" />
+    <Compile Include="11Facade\Facade.cs" />
+    <Compile Include="12Flyweight\01Flyweight.cs" />
+    <Compile Include="12Flyweight\01FlyweightConcrete.cs" />
+    <Compile Include="12Flyweight\01FlyweightUnshared.cs" />
+    <Compile Include="12Flyweight\FlyweightFactory.cs" />
+    <Compile Include="13Propxy\IMath.cs" />
+    <Compile Include="13Propxy\Math.cs" />
+    <Compile Include="13Propxy\MathProxy.cs" />
+    <Compile Include="14ChainofResponsibility\01Handler.cs" />
+    <Compile Include="14ChainofResponsibility\ConcreteHandler1.cs" />
+    <Compile Include="14ChainofResponsibility\ConcreteHandler2.cs" />
+    <Compile Include="14ChainofResponsibility\ConcreteHandler3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -101,7 +129,13 @@
     <Content Include="05Prototype\_readme.txt" />
     <Content Include="06Singleton\_readme.txt" />
     <Content Include="07Adapter\_readme.txt" />
-    <Content Include="8Observer\_readme.txt" />
+    <Content Include="08Observer\_readme.txt" />
+    <Content Include="09Bridge\_readme.txt" />
+    <Content Include="10Composite\_readme.txt" />
+    <Content Include="11Facade\_readme.txt" />
+    <Content Include="12Flyweight\_readme.txt" />
+    <Content Include="13Propxy\_readme.txt" />
+    <Content Include="14ChainofResponsibility\_readme.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -6,6 +6,12 @@ using DesignPattern._04FactoryMethod;
 using DesignPattern._05Prototype;
 using DesignPattern._06Singleton;
 using DesignPattern._07Adapter;
+using DesignPattern._09Bridge;
+using DesignPattern._10Composite;
+using DesignPattern._11Facade;
+using DesignPattern._12Flyweight;
+using DesignPattern._13Propxy;
+using DesignPattern._14ChainofResponsibility;
 using DesignPattern._8Observer;
 using System;
 
@@ -109,6 +115,104 @@ namespace DesignPattern
             //并通过Notify进行更新，让每个观察者都可以观察到最新的状态
             concreteSubject.SubjectState = "ABC";
             concreteSubject.Notify();
+            #endregion
+            #region 桥接模式
+            Console.WriteLine("===========桥接模式============");
+            //首先初始化  _01MakeCoffee 抽象类
+            //白牛奶
+            _01MakeCoffeeSingleton whiteCoffeeSingleton = new _01MakeCoffeeSingleton(new _01MakeCoffee_WhiteCoffee());
+
+            //中杯
+            _02Coffee_MediumCupCoffee mediumWhiteCoffee = new _02Coffee_MediumCupCoffee();
+            mediumWhiteCoffee.Make();
+
+            //大杯
+            _02Coffee_LargeCupCoffee largeCupWhiteCoffee = new _02Coffee_LargeCupCoffee();
+            largeCupWhiteCoffee.Make();
+
+            //黑牛奶
+            _01MakeCoffeeSingleton blackCoffeeSingleton = new _01MakeCoffeeSingleton(new _01MakeCoffee_BlackCoffee());
+            // 中杯
+            _02Coffee_MediumCupCoffee mediumBlackCoffee = new _02Coffee_MediumCupCoffee();
+            mediumBlackCoffee.Make();
+
+            // 大杯
+            _02Coffee_LargeCupCoffee largeCupBlackCoffee = new _02Coffee_LargeCupCoffee();
+            largeCupBlackCoffee.Make();
+            #endregion
+            #region 组合模式
+            Console.WriteLine("===========组合模式============");
+
+            Graphics graphics = new Graphics("全部图形");
+
+            _01Sharp_Circle circle = new _01Sharp_Circle("圆形", 5);
+            graphics.Add(circle);
+            _01Sharp_Rectangle rectangle = new _01Sharp_Rectangle("矩形", 4, 5);
+            graphics.Add(rectangle);
+            _01Sharp_Triangle triangle = new _01Sharp_Triangle("三角形", 3, 4, 5);
+            graphics.Add(triangle);
+            graphics.Display();
+            #endregion
+            #region 外观模式
+            Console.WriteLine("===========外观模式============");
+            Facade facade = new Facade();
+            facade.MethodA();
+            facade.MethodB();
+            #endregion
+            #region 享元模式
+            Console.WriteLine("===========享元模式============");
+            int extrinsicstate = 22;
+            FlyweightFactory factory = new FlyweightFactory();
+
+            //获取不同的Flyweigh实例
+            _01Flyweight fx = factory.GetFlyweight("X");
+            fx.Operation(--extrinsicstate);
+
+            _01Flyweight fy = factory.GetFlyweight("Y");
+            fy.Operation(--extrinsicstate);
+
+            _01Flyweight fz = factory.GetFlyweight("Z");
+            fz.Operation(--extrinsicstate);
+
+            _01FlyweightUnshared fu = new _01FlyweightUnshared();
+            fu.Operation(--extrinsicstate);
+            #endregion
+
+            #region 代理模式
+            Console.WriteLine("===========代理模式============");
+            //创建代理
+            MathProxy proxy = new MathProxy();
+            // Do the math
+            Console.WriteLine("4 + 2 = " + proxy.Add(4, 2));
+            Console.WriteLine("4 - 2 = " + proxy.Sub(4, 2));
+            Console.WriteLine("4 * 2 = " + proxy.Mul(4, 2));
+            Console.WriteLine("4 / 2 = " + proxy.Div(4, 2));
+            #endregion
+            #region 职责链模式
+            Console.WriteLine("===========职责链模式============");
+            // 创建职责链
+            _01Handler h1 = new ConcreteHandler1();
+            _01Handler h2 = new ConcreteHandler2();
+            _01Handler h3 = new ConcreteHandler3();
+
+            //successor 继承 自Handler,执行 else if 条件中的successor.HandleRequest(request);
+            h1.SetSuccessor(h2);
+            h2.SetSuccessor(h3);
+
+            int[] requests = { 2, 5, 14, 22, 18, 3, 27, 20 };
+            foreach (int request in requests)
+            {
+                //else if 条件中的successor.HandleRequest(request);
+                //h1中SetSuccessor（h2）,h2中SetSuccessor（h3）
+                //ConcreteHandler1负责处理的请求范围0~10，
+                //ConcreteHandler2负责处理的请求范围10~20，
+                //ConcreteHandler3负责处理的请求范围20~30。
+                //当请求ConcreteHandler1处理不了，则让ConcreteHandler2处理，
+                //如果ConcreteHandler2处理不了，则让ConcreteHandler3处理。
+                //依次类推，Client的请求会验证职责链传递下去，直至请求被处理，
+                //而Client不要关心到底是谁处理了请求。
+                h1.HandleRequest(request);
+            }
             #endregion
             Console.Read();
         }
