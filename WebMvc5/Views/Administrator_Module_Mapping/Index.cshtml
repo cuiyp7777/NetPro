@@ -1,0 +1,30 @@
+﻿@model IEnumerable<WebMvc5.Models.Administrator_Module_Mapping>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <table>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Administrator_Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Module)
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

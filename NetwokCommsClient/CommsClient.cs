@@ -25,10 +25,27 @@ namespace NetwokCommsClient
         {
             //连接信息 
             var connInfo = new ConnectionInfo(txtSerIP.Text, int.Parse(txtSerPort.Text));
-            //连接服务器
-            var newTcpConnection = TCPConnection.GetConnection(connInfo);
-            //发送【GetName】请求，获取对应【ResName】值
-            string resMsg = newTcpConnection.SendReceiveObject<string, string>("GetName", "ResName", 5000, listBox1.Text);
+            try
+            {
+                //连接服务器
+               var newTcpConnection = TCPConnection.GetConnection(connInfo);
+                bool ConFlag = newTcpConnection.ConnectionAlive(1000);
+                if (!newTcpConnection.ConnectionAlive(1000) || newTcpConnection == null)
+                {
+                    this.txtReInfo.Text = "未找到服务端...";
+                }
+
+                //发送【GetName】请求，获取对应【ResName】值
+                string resMsg = newTcpConnection.SendReceiveObject<string, string>("GetName", "ResName", 5000, listBox1.Text);
+                this.txtReInfo.Text = resMsg;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            
+            
 
 
             ////5秒重联
@@ -40,7 +57,7 @@ namespace NetwokCommsClient
             //    //重连方法？
             //});
 
-            this.txtReInfo.Text = resMsg;
+            
         }
         //动态的返回匹配字符串
         private void button2_Click(object sender, EventArgs e)
