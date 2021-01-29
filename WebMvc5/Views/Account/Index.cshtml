@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "列表页面";
+}
+@model IEnumerable<WebMvc5.Models.SysUser>
+<!DOCTYPE html>
+
+
+<div>
+    <p>@Html.ActionLink("Create New", "Create")</p>
+    @using (Html.BeginForm())
+    {
+        <p>
+            姓名：@Html.TextBox("SearchString");
+            <input type="submit" value="Search" />
+        </p>
+    }
+    <table class="table table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+                @Html.ActionLink("切换顺序", "Index", new { sortOrder = ViewBag.NameSortParm })
+            </th>
+            <th>@Html.DisplayNameFor(model => model.Email)</th>
+            <th>@Html.DisplayNameFor(model => model.CreateDate)</th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(a => item.UserName)</td>
+                <td>@Html.DisplayFor(a => item.Email)</td>
+                <td>@Html.DisplayFor(a => item.CreateDate)</td>
+                <td>
+                    @Html.ActionLink("Detials", "Details", new { id = item.ID })
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+

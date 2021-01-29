@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WebMvc5</RootNamespace>
     <AssemblyName>WebMvc5</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -26,6 +26,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,6 +48,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -55,16 +57,14 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
@@ -109,6 +109,7 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -127,26 +128,139 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\Administrator_Module_MappingController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Dal\EFDbContext.cs" />
+    <Compile Include="Controllers\MVCDemoController.cs" />
+    <Compile Include="DAL\AccountContext.cs" />
+    <Compile Include="DAL\AccountInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Administrator_Module_Mapping.cs" />
+    <Compile Include="Migrations\202101290804249_AddCreateDateToSysUser.cs" />
+    <Compile Include="Migrations\202101290804249_AddCreateDateToSysUser.designer.cs">
+      <DependentUpon>202101290804249_AddCreateDateToSysUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101290820235_AddCreateDateToSysUser1.cs" />
+    <Compile Include="Migrations\202101290820235_AddCreateDateToSysUser1.designer.cs">
+      <DependentUpon>202101290820235_AddCreateDateToSysUser1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101290837075_AddCreateDateToSysUser2.cs" />
+    <Compile Include="Migrations\202101290837075_AddCreateDateToSysUser2.designer.cs">
+      <DependentUpon>202101290837075_AddCreateDateToSysUser2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\SysRole.cs" />
+    <Compile Include="Models\SysUser.cs" />
+    <Compile Include="Models\SysUserRole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ISysUserRepository.cs" />
+    <Compile Include="Repositories\SysUserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\assets\brand\bootstrap-outline.svg" />
+    <Content Include="Content\assets\brand\bootstrap-punchout.svg" />
+    <Content Include="Content\assets\brand\bootstrap-solid.svg" />
+    <Content Include="Content\assets\css\docs.css" />
+    <Content Include="Content\assets\css\docs.min.css" />
+    <Content Include="Content\assets\css\ie10-viewport-bug-workaround.css" />
+    <Content Include="Content\assets\img\bs-themes.png" />
+    <Content Include="Content\assets\img\components.png" />
+    <Content Include="Content\assets\img\devices.png" />
+    <Content Include="Content\assets\img\expo-lyft.jpg" />
+    <Content Include="Content\assets\img\expo-newsweek.jpg" />
+    <Content Include="Content\assets\img\expo-vogue.jpg" />
+    <Content Include="Content\assets\img\sass-less.png" />
+    <Content Include="Content\assets\js\customize.min.js" />
+    <Content Include="Content\assets\js\docs.min.js" />
+    <Content Include="Content\assets\js\ie-emulation-modes-warning.js" />
+    <Content Include="Content\assets\js\ie10-viewport-bug-workaround.js" />
+    <Content Include="Content\assets\js\ie8-responsive-file-warning.js" />
+    <Content Include="Content\assets\js\raw-files.min.js" />
+    <Content Include="Content\assets\js\src\application.js" />
+    <Content Include="Content\assets\js\src\customizer.js" />
+    <Content Include="Content\assets\js\src\search.js" />
+    <Content Include="Content\assets\js\vendor\anchor.min.js" />
+    <Content Include="Content\assets\js\vendor\autoprefixer.js" />
+    <Content Include="Content\assets\js\vendor\base64.js" />
+    <Content Include="Content\assets\js\vendor\Blob.js" />
+    <Content Include="Content\assets\js\vendor\clipboard.min.js" />
+    <Content Include="Content\assets\js\vendor\FileSaver.js" />
+    <Content Include="Content\assets\js\vendor\holder.min.js" />
+    <Content Include="Content\assets\js\vendor\jquery.min.js" />
+    <Content Include="Content\assets\js\vendor\jszip.min.js" />
+    <Content Include="Content\assets\js\vendor\less.min.js" />
+    <Content Include="Content\assets\js\vendor\requestAnimationFrame-polyfill.js" />
+    <Content Include="Content\assets\js\vendor\uglify.min.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\dashboard.css" />
+    <Content Include="Content\navbar-fixed-top.css" />
+    <Content Include="Content\signin.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\assets\css\docs.css.map" />
+    <Content Include="Content\assets\css\docs.min.css.map" />
+    <Content Include="Content\assets\less\ads.less" />
+    <Content Include="Content\assets\less\algolia.less" />
+    <Content Include="Content\assets\less\anchor.less" />
+    <Content Include="Content\assets\less\booticon.less" />
+    <Content Include="Content\assets\less\brand.less" />
+    <Content Include="Content\assets\less\buttons.less" />
+    <Content Include="Content\assets\less\callouts.less" />
+    <Content Include="Content\assets\less\clipboard-js.less" />
+    <Content Include="Content\assets\less\customizer.less" />
+    <Content Include="Content\assets\less\demos.less" />
+    <Content Include="Content\assets\less\docs.less" />
+    <Content Include="Content\assets\less\examples.less" />
+    <Content Include="Content\assets\less\featured-sites.less" />
+    <Content Include="Content\assets\less\featurettes.less" />
+    <Content Include="Content\assets\less\footer.less" />
+    <Content Include="Content\assets\less\glyphicons.less" />
+    <Content Include="Content\assets\less\ie10-viewport-bug-workaround.less" />
+    <Content Include="Content\assets\less\masthead.less" />
+    <Content Include="Content\assets\less\misc.less" />
+    <Content Include="Content\assets\less\nav.less" />
+    <Content Include="Content\assets\less\page-header.less" />
+    <Content Include="Content\assets\less\responsive-tests.less" />
+    <Content Include="Content\assets\less\sidebar.less" />
+    <Content Include="Content\assets\less\skip-link.less" />
+    <Content Include="Content\assets\less\swatches.less" />
+    <Content Include="Content\assets\less\syntax.less" />
+    <Content Include="Content\assets\less\team.less" />
+    <Content Include="Content\less\ads.less" />
+    <Content Include="Content\less\algolia.less" />
+    <Content Include="Content\less\anchor.less" />
+    <Content Include="Content\less\booticon.less" />
+    <Content Include="Content\less\brand.less" />
+    <Content Include="Content\less\buttons.less" />
+    <Content Include="Content\less\callouts.less" />
+    <Content Include="Content\less\clipboard-js.less" />
+    <Content Include="Content\less\customizer.less" />
+    <Content Include="Content\less\demos.less" />
+    <Content Include="Content\less\docs.less" />
+    <Content Include="Content\less\examples.less" />
+    <Content Include="Content\less\featured-sites.less" />
+    <Content Include="Content\less\featurettes.less" />
+    <Content Include="Content\less\footer.less" />
+    <Content Include="Content\less\glyphicons.less" />
+    <Content Include="Content\less\ie10-viewport-bug-workaround.less" />
+    <Content Include="Content\less\masthead.less" />
+    <Content Include="Content\less\misc.less" />
+    <Content Include="Content\less\nav.less" />
+    <Content Include="Content\less\page-header.less" />
+    <Content Include="Content\less\responsive-tests.less" />
+    <Content Include="Content\less\sidebar.less" />
+    <Content Include="Content\less\skip-link.less" />
+    <Content Include="Content\less\swatches.less" />
+    <Content Include="Content\less\syntax.less" />
+    <Content Include="Content\less\team.less" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -172,10 +286,21 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Administrator_Module_Mapping\Index.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\Details.cshtml" />
+    <Content Include="Views\Account\Create.cshtml" />
+    <Content Include="Views\Account\Edit.cshtml" />
+    <Content Include="Views\Account\Delete.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\MVCDemo\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Shared\_PartialPageWidget.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -192,6 +317,17 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202101290804249_AddCreateDateToSysUser.resx">
+      <DependentUpon>202101290804249_AddCreateDateToSysUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101290820235_AddCreateDateToSysUser1.resx">
+      <DependentUpon>202101290820235_AddCreateDateToSysUser1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101290837075_AddCreateDateToSysUser2.resx">
+      <DependentUpon>202101290837075_AddCreateDateToSysUser2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

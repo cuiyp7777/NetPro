@@ -1,0 +1,37 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet" />
+    <link href="~/Content/signin.css" rel="stylesheet" />
+    <script src="~/Content/assets/js/ie-emulation-modes-warning.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!--服务器端需要通过name来取值-->
+        @*<form action="/Account/Login" method="post" class="form-horizontal" role="form">*@
+        @using (Html.BeginForm("login", "Account", FormMethod.Post))
+        {
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="InputEmail1" name="InputEmail1" class="form-control" placeholder="Email address" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="InputPassword1" name="InputPassword1" class="form-control" placeholder="Password" required>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        }
+        @*</form>*@
+    </div>
+
+</body>
+</html>
