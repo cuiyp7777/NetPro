@@ -11,7 +11,7 @@ namespace WebMvc5.Models
     {
         //EF默认会将ID或classnameID生成主键
         public int ID { get; set; }
-        [DisplayName("用户名")]
+        [DisplayName("用户名"), StringLength(10, ErrorMessage = "名字不能超过10个字。")]
         public string UserName { get; set; }
         [DisplayName("密码")]
         public string PassWord { get; set; }
@@ -23,5 +23,8 @@ namespace WebMvc5.Models
         public DateTime CreateDate { get; set; }
 
         public virtual ICollection<SysUserRole> SysUserRoles { get; set; }
+
+        public int? SysDepartmentID { get; set; }
+        public virtual SysDepartment SysDepartment { get; set; }
     }
 }

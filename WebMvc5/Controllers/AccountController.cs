@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -19,7 +20,7 @@ namespace WebMvc5.Controllers
             //普通、加条件、排序分页(必须Orderby排序)
             ViewBag.NameSortParm = string.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             //表达式方式
-            var users = from u in db.SysUsers select u;
+            //var users = from u in db.SysUsers select u;
             //var users1 = from u in db.SysUsers where u.UserName == "Tom" select u;
             //var users2 = (from u in db.SysUsers orderby u.UserName select u).Skip(0).Take(5);
             //连接查询
@@ -28,10 +29,11 @@ namespace WebMvc5.Controllers
             //var users = db.SysUsers;
             //var users1 = db.SysUsers.Where(u=>u.UserName=="Tom");
             //var users2 = db.SysUsers.OrderBy(u => u.UserName).Skip(0).Take(5);
-            if (!string.IsNullOrEmpty(searchString))
-            {
-                users = users.Where(u => u.UserName.Contains(searchString));
-            }
+            //if (!string.IsNullOrEmpty(searchString))
+            //{
+            //    users = users.Where(u => u.UserName.Contains(searchString));
+            //}
+            var users = db.SysUsers.Include(u => u.SysDepartment);
             switch (sortOrder)
             {
                 case "name_desc":
@@ -42,8 +44,8 @@ namespace WebMvc5.Controllers
                     break;
             }
             //聚合查询
-            var num = db.SysUsers.Count();//查总数
-            var minId = db.SysUsers.Min(u => u.ID);//查最小ID
+            //var num = db.SysUsers.Count();//查总数
+            //var minId = db.SysUsers.Min(u => u.ID);//查最小ID
             //tolist 才会正式生效
             return View(users.ToList());
         }
@@ -57,7 +59,18 @@ namespace WebMvc5.Controllers
         //详情
         public ActionResult Details(int id)
         {
-            SysUser sysUser = db.SysUsers.Find(id);
+            //SysUser sysUser = db.SysUsers.Find(id);
+            
+            //EF提供一组方法用来执行原生的SQL
+            string query = "select * from [CuiPro].[dbo].[SysUser] where ID=@id";
+            SqlParameter[] paras = new SqlParameter[] {
+                new SqlParameter("@id",id)
+            };
+            //var sysUser = db.SysUsers.SqlQuery(query, paras).SingleOrDefault();
+
+            //DbSet.SqlQuery查询并返回Entities
+            var sysUserEntity = db.Set<SysUser>();
+            var sysUser=sysUserEntity.SqlQuery(query, paras).SingleOrDefault();
             return View(sysUser);
         }
         //新建用户
@@ -68,9 +81,15 @@ namespace WebMvc5.Controllers
         [HttpPost]
         public ActionResult Create(SysUser sysUser)
         {
-            db.SysUsers.Add(sysUser);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            //增加一个判断条件ModelState.IsValid
+            if (ModelState.IsValid)
+            {
+                sysUser.CreateDate = DateTime.Now;
+                db.SysUsers.Add(sysUser);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View();
         }
         //修改用户
         public ActionResult Edit(int id)

@@ -132,6 +132,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MVCDemoController.cs" />
+    <Compile Include="Controllers\UserRoleController.cs" />
     <Compile Include="DAL\AccountContext.cs" />
     <Compile Include="DAL\AccountInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -149,13 +150,24 @@
     <Compile Include="Migrations\202101290837075_AddCreateDateToSysUser2.designer.cs">
       <DependentUpon>202101290837075_AddCreateDateToSysUser2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102010846094_MaxLengthOnNames.cs" />
+    <Compile Include="Migrations\202102010846094_MaxLengthOnNames.designer.cs">
+      <DependentUpon>202102010846094_MaxLengthOnNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102010927021_adddeparmentid.cs" />
+    <Compile Include="Migrations\202102010927021_adddeparmentid.designer.cs">
+      <DependentUpon>202102010927021_adddeparmentid.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\SysDepartment.cs" />
     <Compile Include="Models\SysRole.cs" />
     <Compile Include="Models\SysUser.cs" />
     <Compile Include="Models\SysUserRole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ISysUserRepository.cs" />
     <Compile Include="Repositories\SysUserRepository.cs" />
+    <Compile Include="ViewModels\AssignedRoleData.cs" />
+    <Compile Include="ViewModels\UserRoleIndexData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\assets\brand\bootstrap-outline.svg" />
@@ -297,10 +309,11 @@
     <Content Include="Views\MVCDemo\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Shared\_PartialPageWidget.cshtml" />
+    <Content Include="Views\UserRole\Index.cshtml" />
+    <Content Include="Views\UserRole\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -327,6 +340,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101290837075_AddCreateDateToSysUser2.resx">
       <DependentUpon>202101290837075_AddCreateDateToSysUser2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102010846094_MaxLengthOnNames.resx">
+      <DependentUpon>202102010846094_MaxLengthOnNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102010927021_adddeparmentid.resx">
+      <DependentUpon>202102010927021_adddeparmentid.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
