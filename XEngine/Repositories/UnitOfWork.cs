@@ -8,6 +8,7 @@ using XEngine.Repositories;
 
 namespace XEngine.Repositories
 {
+    //处理context的一致性
     public class UnitOfWork : IDisposable
     {
         private XEngineContext _context = new XEngineContext();

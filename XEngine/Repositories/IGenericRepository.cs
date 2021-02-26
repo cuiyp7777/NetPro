@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace XEngine.Repositories
 {
+    //使用泛型抽象
     public interface IGenericRepository<TEntity>
     {
         IEnumerable<TEntity> Get();
